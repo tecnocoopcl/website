@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.2",
+  "version": "3.0.0-beta.3",
   "dmg": {
-    "file": "espacio-3.0.0-beta.2-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.2-arm64.dmg",
-    "sha512": "LUUMR6EapCNdg7ZBakyy3K/iBSqXNd9en0G3GdbRmGyNJAXU5OBlUWmnxPjcbDgLkHXa7DTDlmh7AtlcE7XNNg==",
-    "size": 127634720
+    "file": "espacio-3.0.0-beta.3-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.3-arm64.dmg",
+    "sha512": "PYA89I/Qo94CCNqaxxK55UM/xpFbVtxN531lrnSLvkR36/nZTHtv+Tgfg3Ug00xMqvkT0p60ePRkCcTKverMRg==",
+    "size": 127647650
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.2-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.2-x64.dmg",
-    "sha512": "0QI+zqWRPaZFufOhO5gx/oPznIiU8iYcIWDweqELk9miH2NfiGeH1kiBCV9ceMW7/+AKStV+mciv3Eril1siMA==",
-    "size": 134602943
+    "file": "espacio-3.0.0-beta.3-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.3-x64.dmg",
+    "sha512": "4OE+vWbYjptQZ9+EPPL/fVaxL7mSb9cs58dOr8ImxLFrmQevUkGsQHRfulfmimXJoyMoI5fjAkfoWM8kNhjwcQ==",
+    "size": 134624389
   },
-  "notes": "Inicio y Cuenta muestran el consumo eléctrico del mes de la cooperativa, con un gráfico mínimo por día (el detalle, al pasar el cursor).",
-  "date": "2026-11-12T05:41:06.801Z"
+  "notes": "Estudio: la audioteca se organiza en proyectos, con fecha de estreno y etiquetas que se unifican solas. Los audios grandes se pueden recomprimir o adjuntar desde el pod, y una subida cortada ya no queda como terminada.",
+  "date": "2026-11-12T21:28:11.594Z"
 }
