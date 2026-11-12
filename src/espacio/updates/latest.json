@@ -1,17 +1,17 @@
 {
-  "version": "2.9.0",
+  "version": "2.9.1",
   "dmg": {
-    "file": "espacio-2.9.0-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.0-arm64.dmg",
-    "sha512": "OWDnfj6y0RV3A4fnMxQ6Aoo0iJmFYg2iQuIomAuK8BUMut2vXNMXtSI4j4sjt8BLpOu61vSh+LdT33evcJvl0Q==",
-    "size": 127577817
+    "file": "espacio-2.9.1-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.1-arm64.dmg",
+    "sha512": "TzVJ4WXwzWGaZpL9ORYPWzZLaGf2aXRlqcPqw38s1NB2o09rwXnry+byny5GKJ0Zc40K4MVbRkoRKOUc8kBfQA==",
+    "size": 127583544
   },
   "dmgX64": {
-    "file": "espacio-2.9.0-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.0-x64.dmg",
-    "sha512": "YaHNqf7caVjC75dcN6+BBK55mglzj7eUo5xd04Gz/5T6gxPSocXGK56Khe5JqlPNYAE+PH6dagwOvOyJYLxSkw==",
-    "size": 134563664
+    "file": "espacio-2.9.1-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.1-x64.dmg",
+    "sha512": "1Sg7ms+AGlXx4GnbozqXh8i/atemx3LgqOTw20lUdfDVBmvatl2k5P6/mNdokaFM/lrFq5YUuBoWR+eHTN6ssQ==",
+    "size": 134544912
   },
-  "notes": "Estudio muestra las escuchas de lo publicado y la audioteca se ordena en proyectos, con fecha de estreno y etiquetas que se unifican solas. Los audios grandes se pueden recomprimir o adjuntar desde el pod, y una subida cortada ya no queda como terminada.",
-  "date": "2026-11-12T21:02:06.482Z"
+  "notes": "Las actualizaciones pasan a consultarse en tecnocooperativa.cl, el nuevo dominio del sitio de la cooperativa.",
+  "date": "2026-11-12T21:53:05.787Z"
 }
