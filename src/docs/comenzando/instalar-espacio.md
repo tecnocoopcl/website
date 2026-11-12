@@ -1,6 +1,6 @@
 ---
 title: "Instalar espacio"
-description: "Cómo descargar e instalar espacio, la app de escritorio de Tecnocoop, en Mac, Ubuntu y Windows."
+description: "Cómo descargar e instalar espacio, la app de escritorio de Tecnocooperativa, en Mac, Ubuntu y Windows."
 order: 2
 ---
 

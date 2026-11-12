@@ -1,6 +1,6 @@
 ---
 title: "Crea tu Pod y tu WebID"
-description: "El primer paso en Tecnocoop: entra a tu cuenta y crea tu Pod, que trae tu WebID."
+description: "El primer paso en Tecnocooperativa: entra a tu cuenta y crea tu Pod, que trae tu WebID."
 order: 1
 ---
 

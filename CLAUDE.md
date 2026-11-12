@@ -1,4 +1,4 @@
-# Tecnocoop — sitio web
+# Tecnocooperativa — sitio web
 
 ## Idioma
 

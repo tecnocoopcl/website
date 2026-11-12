@@ -5,6 +5,11 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
 ## [Sin publicar]
 
+## [1.15.0] - 2026-11-12
+
+### Cambiado
+- La marca pasa de «Tecnocoop» a «Tecnocooperativa», con el lema «Construyendo espacio público digital».
+
 ## [1.14.0] - 2026-10-22
 
 ### Añadido

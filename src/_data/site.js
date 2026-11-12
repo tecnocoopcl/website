@@ -1,9 +1,9 @@
 module.exports = {
-  name: "Tecnocoop",
+  name: "Tecnocooperativa",
   legalName: "Cooperativa para el Espacio Público Digital",
   // Etapa previa a la constitución legal; se explica en /sobre/#estado.
   etapa: "en etapa de organización inicial",
-  tagline: "Software y hardware cooperativo, al servicio de las personas",
+  tagline: "Construyendo espacio público digital",
   url: "https://tecnocoop.aebn.cl",
   nav: [
     { text: "Inicio", url: "/" },

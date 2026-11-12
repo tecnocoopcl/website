@@ -18,7 +18,7 @@ En lugar de que tus datos —fotos, contactos, documentos, publicaciones— viva
 | ¿Los datos están atados a una app? | Sí | No, cualquier app compatible con Solid puede usarlos |
 | ¿Puedes cambiarte de proveedor sin perder tus datos? | Generalmente no | Sí |
 
-## ¿Por qué Tecnocoop ofrece Pods?
+## ¿Por qué Tecnocooperativa ofrece Pods?
 
 Como cooperativa, creemos que la infraestructura digital debería estar al servicio de las personas, no al revés. Ofrecer Pods es una forma concreta de poner en práctica esa idea: alojamiento cooperativo, transparente y centrado en quienes lo usan.
 
