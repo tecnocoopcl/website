@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.4",
+  "version": "3.0.0-beta.5",
   "dmg": {
-    "file": "espacio-3.0.0-beta.4-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.4-arm64.dmg",
-    "sha512": "cMF88+7Zo0ytz7BOgvLUAjybfai5A1srvFYfghAM1wS9WXEXGOVMpF6T8WxsiHW1aIn7yPx/ujoJ3mYrfRNszg==",
-    "size": 127647437
+    "file": "espacio-3.0.0-beta.5-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.5-arm64.dmg",
+    "sha512": "OgXVgYhTEyaJpixUhCvaVxcmbSBZ6iDmS7vjYoLjph7PQqb8DY90pYrgiJULWmYsNYx3+AzVNXydXql9SLcq6A==",
+    "size": 127657587
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.4-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.4-x64.dmg",
-    "sha512": "Gh3r+dPF59H8MtSPE0lePjtqQfyhfSXajJav2NhlK3IbGedFDB3jeRyA5YQmBzsBbzuMBli/2ljTVL7hyD6C7w==",
-    "size": 134624151
+    "file": "espacio-3.0.0-beta.5-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.5-x64.dmg",
+    "sha512": "TFegdVdiHE60MQk06f977z+iUqWtBDs/FExa6ZnalWlOsK9uv6mTdCIVIW6ngAA1FsBRCmzdqfyVPzM68V8D7g==",
+    "size": 134617768
   },
-  "notes": "Las actualizaciones pasan a consultarse en tecnocooperativa.cl, el nuevo dominio del sitio de la cooperativa.",
-  "date": "2026-11-12T22:01:04.156Z"
+  "notes": "El parlante de la pestaña marca solo lo que suena y no parpadea; el formulario de pieza de Estudio no pierde lo escrito al subir el audio.",
+  "date": "2026-11-13T17:26:52.667Z"
 }
