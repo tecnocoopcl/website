@@ -4,7 +4,7 @@ title: Estado
 description: "Estado de la infraestructura de Tecnocooperativa: salud general, almacenamiento y servicios."
 permalink: /estado/
 ---
-{% set freeGb = (status.storage.totalGb - status.storage.usedGb) | round(1) %}
+{% set freeGb = status.storage.freeGb %}
 {% set usedPct = (status.storage.usedGb / status.storage.totalGb * 100) | round(1) %}
 {% set badgeLabels = { ok: "Operativo", degraded: "Degradado", down: "Caído", disabled: "No disponible" } %}
 <section class="page-content" data-estado-page>
@@ -25,10 +25,15 @@ permalink: /estado/
       <p>Energía consumida por la infraestructura de la cooperativa.</p>
       <div class="service-stats">
         <div>
-          <strong data-field="kwh-today">{{ status.kwhToday }} kWh</strong>
-          <span>Actualizado al <span data-field="date">{{ status.date | fechaLarga }}</span></span>
+          <strong data-field="kwh-month">{{ status.kwhMonth }} kWh</strong>
+          <span>este mes</span>
+        </div>
+        <div>
+          <strong data-field="kwh-total">{{ status.kwhTotal }} kWh</strong>
+          <span>acumulados desde la primera lectura</span>
         </div>
       </div>
+      <p class="status-source-note">Actualizado al <span data-field="date">{{ status.date | fechaLarga }}</span>.</p>
     </div>
 
     <h2>Almacenamiento</h2>

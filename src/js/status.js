@@ -111,7 +111,9 @@
     }
 
     setField("pod-count", metrics.pod_count);
-    setField("kwh-today", metrics.kwh + " kWh");
+    // kwh es el acumulado desde la primera lectura; kwh_month, el del mes en curso.
+    setField("kwh-month", metrics.kwh_month + " kWh");
+    setField("kwh-total", metrics.kwh + " kWh");
 
     var note = document.querySelector('[data-field="source-note"]');
     if (note) {
