@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.5",
+  "version": "3.0.0-beta.6",
   "dmg": {
-    "file": "espacio-3.0.0-beta.5-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.5-arm64.dmg",
-    "sha512": "OgXVgYhTEyaJpixUhCvaVxcmbSBZ6iDmS7vjYoLjph7PQqb8DY90pYrgiJULWmYsNYx3+AzVNXydXql9SLcq6A==",
-    "size": 127657587
+    "file": "espacio-3.0.0-beta.6-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.6-arm64.dmg",
+    "sha512": "S4YNHmNOVRMBFPltLY+3x+7DCleiSZrlZW7dtuMHQfLaIjZYsCtUbrnQzB8CXr+Uw3g9UyT4KD8p5M3N5qWVsg==",
+    "size": 127657854
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.5-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.5-x64.dmg",
-    "sha512": "TFegdVdiHE60MQk06f977z+iUqWtBDs/FExa6ZnalWlOsK9uv6mTdCIVIW6ngAA1FsBRCmzdqfyVPzM68V8D7g==",
-    "size": 134617768
+    "file": "espacio-3.0.0-beta.6-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.6-x64.dmg",
+    "sha512": "mimAZpBjZPSXcwBW16uibd4d363Qg5AlPFQK/sGVfvF5l9SqwUUZcecjX7NSWQQaoTOBkw7c73gCH5MbTH7pxg==",
+    "size": 134617107
   },
-  "notes": "El parlante de la pestaña marca solo lo que suena y no parpadea; el formulario de pieza de Estudio no pierde lo escrito al subir el audio.",
-  "date": "2026-11-13T17:26:52.667Z"
+  "notes": "En Estudio, las piezas de una serie de la audioteca se numeran y se reordenan con ↑/↓. Estudio enlaza la audioteca en audioteca.tecnocooperativa.cl.",
+  "date": "2026-11-13T22:13:22.369Z"
 }
