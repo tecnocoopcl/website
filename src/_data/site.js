@@ -4,7 +4,7 @@ module.exports = {
   // Etapa previa a la constitución legal; se explica en /sobre/#estado.
   etapa: "en etapa de organización inicial",
   tagline: "Construyendo espacio público digital",
-  url: "https://tecnocoop.aebn.cl",
+  url: "https://tecnocooperativa.cl",
   nav: [
     { text: "Inicio", url: "/" },
     {
