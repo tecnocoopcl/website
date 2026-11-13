@@ -5,6 +5,11 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
 ## [Sin publicar]
 
+## [1.16.1] - 2026-11-13
+
+### Corregido
+- La dirección del sitio pasa a tecnocooperativa.cl, el dominio actual de la cooperativa, en vez de tecnocoop.aebn.cl.
+
 ## [1.16.0] - 2026-11-13
 
 ### Cambiado
