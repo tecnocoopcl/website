@@ -1,5 +1,8 @@
 <div class="card app-card">
-  <h3><a href="{{ app.pagina }}">{{ app.name }}</a></h3>
+  <div class="app-card__cabecera">
+    <img class="app-icono" src="{{ app.icono }}" alt="" width="48" height="48" loading="lazy">
+    <h3><a href="{{ app.pagina }}">{{ app.name }}</a></h3>
+  </div>
   {% include "partials/etiquetas.njk" %}
   <p>{{ app.description }}</p>
   {% if app.url %}<p class="app-card__url"><a href="{{ app.url }}" target="_blank" rel="noopener">{{ app.url | replace("https://", "") }} ↗</a></p>{% endif %}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Diagramador">
+  <rect width="64" height="64" rx="14" fill="#6d28d9"/>
+  <path d="M20 20h13M44 25v13M20 44h13" fill="none" stroke="#ddd6fe" stroke-width="3" stroke-linecap="round"/>
+  <path d="M31 19l13 7M44 38l-12 7" fill="none" stroke="#ddd6fe" stroke-width="3" stroke-linecap="round"/>
+  <rect x="10" y="13" width="12" height="12" rx="3" fill="#fff"/>
+  <circle cx="46" cy="32" r="7" fill="#fff"/>
+  <rect x="10" y="39" width="12" height="12" rx="3" fill="#fff"/>
+</svg>

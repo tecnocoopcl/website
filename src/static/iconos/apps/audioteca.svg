@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Audioteca">
+  <rect width="64" height="64" rx="14" fill="#374151"/>
+  <path d="M18 38v-6a14 14 0 0 1 28 0v6" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+  <rect x="14" y="36" width="8" height="12" rx="3" fill="#fff"/>
+  <rect x="42" y="36" width="8" height="12" rx="3" fill="#fff"/>
+  <path d="M28 30v8M32 26v16M36 30v8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+</svg>

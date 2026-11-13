@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% include "partials/head.njk" %}
   <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
-  <meta name="description" content="{{ description or site.tagline }}">
-  <link rel="stylesheet" href="/css/style.css?v={{ pkg.version }}">
 </head>
 <body>
   {% include "partials/nav.njk" %}

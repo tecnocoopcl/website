@@ -19,7 +19,13 @@ const apps = [
   { id: "archivador", name: "Archivador", tipos: ["nativa", "web"], temprana: true, url: "https://archivador.aebn.cl", description: "Referencias y PDF al estilo de Zotero, con destacados y notas." },
   { id: "audioteca", name: "Audioteca", tipos: ["web"], url: "https://audioteca.aebn.cl", description: "Charlas, crónicas, clases y relatos de los socios, ordenados por temática y con feed para tu app de podcasts." },
 ]
-  .map((app) => ({ ...app, pagina: `/aplicaciones/${app.id}/`, docs: `/docs/aplicaciones/${app.id}/` }))
+  // El ícono es el mismo SVG del launcher de espacio (npm run sincronizar:espacio).
+  .map((app) => ({
+    ...app,
+    pagina: `/aplicaciones/${app.id}/`,
+    docs: `/docs/aplicaciones/${app.id}/`,
+    icono: `/static/iconos/apps/${app.id}.svg`,
+  }))
   .sort((a, b) => a.name.localeCompare(b.name, "es"));
 
 module.exports = {

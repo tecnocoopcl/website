@@ -1,0 +1,9 @@
+{#- Lo que comparten base.njk y docs.njk en el <head>: la paleta de espacio
+    (css/espacio/tema.css) va siempre antes de style.css, que la usa. -#}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description or site.tagline }}">
+  <meta name="theme-color" content="#12131a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="/css/espacio/tema.css?v={{ pkg.version }}">
+  <link rel="stylesheet" href="/css/style.css?v={{ pkg.version }}">

@@ -1,44 +1,32 @@
+/*
+ * El sitio se viste con el lenguaje visual de espacio: la paleta y las medidas
+ * vienen de css/espacio/tema.css (copiado de la SDK, ver
+ * scripts/sincronizar-espacio.mjs). Aquí solo se les da nombre a los usos del
+ * sitio; ningún color se define en este archivo.
+ */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-muted: #5a5a5a;
-  --color-primary: #1f6f54;
-  --color-primary-dark: #16513d;
-  --color-accent-bg: #f2f7f5;
-  --color-border: #e2e2e2;
+  --color-bg: var(--esp-bg);
+  --color-surface: var(--esp-bg-elevated);
+  --color-text: var(--esp-text);
+  --color-muted: var(--esp-text-muted);
+  --color-primary: var(--esp-accent);
+  --color-primary-dark: var(--esp-accent);
+  --color-primary-text: var(--esp-accent-text);
+  --color-accent-bg: var(--esp-bg-sunken);
+  --color-border: var(--esp-border);
   --max-width: 960px;
-  --radius: 8px;
-  --color-ok: #1f9d55;
-  --color-ok-bg: #eaf9ef;
-  --color-degraded: #b7791f;
-  --color-degraded-bg: #fdf6ec;
-  --color-down: #c0392b;
-  --color-down-bg: #fdecea;
-  --color-status-ok: #2e7d32;
-  --color-status-down: #c62828;
-  --color-status-unknown: #9a9a9a;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #12161a;
-    --color-text: #f0f0f0;
-    --color-muted: #a8a8a8;
-    --color-primary: #4fbf96;
-    --color-primary-dark: #7fd8b6;
-    --color-accent-bg: #1a2420;
-    --color-border: #2a2f34;
-    --color-ok: #4fd07a;
-    --color-ok-bg: #163524;
-    --color-degraded: #e0ac47;
-    --color-degraded-bg: #3a2f18;
-    --color-down: #e2685a;
-    --color-down-bg: #3a1e1b;
-    --color-status-ok: #66bb6a;
-    --color-status-down: #ef5350;
-    --color-status-unknown: #7a7a7a;
-  }
+  --radius: var(--esp-radius);
+  --radius-control: var(--esp-radius-control);
+  --color-ok: var(--esp-ok);
+  --color-ok-bg: color-mix(in srgb, var(--esp-ok) 14%, transparent);
+  --color-degraded: var(--esp-warn);
+  --color-degraded-bg: color-mix(in srgb, var(--esp-warn) 14%, transparent);
+  --color-down: var(--esp-danger);
+  --color-down-bg: color-mix(in srgb, var(--esp-danger) 14%, transparent);
+  --color-status-ok: var(--esp-ok);
+  --color-status-down: var(--esp-danger);
+  --color-status-unknown: var(--esp-text-muted);
+  font-family: var(--esp-font);
 }
 
 * {
@@ -236,18 +224,18 @@ a {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
+  border-radius: var(--radius-control);
   text-decoration: none;
   font-weight: 600;
 }
 
 .btn-primary {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-primary-text);
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-dark);
+  filter: brightness(1.08);
 }
 
 .btn-secondary {
@@ -275,13 +263,13 @@ a {
 }
 
 .split-btn__main {
-  border-radius: var(--radius) 0 0 var(--radius);
+  border-radius: var(--radius-control) 0 0 var(--radius-control);
 }
 
 .split-btn__toggle {
   border: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-left: 1px solid color-mix(in srgb, var(--color-primary-text) 35%, transparent);
+  border-radius: 0 var(--radius-control) var(--radius-control) 0;
   padding: 0.75rem 0.9rem;
   cursor: pointer;
   font: inherit;
@@ -383,7 +371,7 @@ a {
 
 .etiqueta--nativa {
   background: var(--color-primary);
-  color: var(--color-bg);
+  color: var(--color-primary-text);
 }
 
 .etiqueta--web {
@@ -404,7 +392,7 @@ a {
 }
 
 .app-card .app-etiquetas {
-  margin-top: -0.5rem;
+  margin-top: 0;
 }
 
 /* Qué significa cada etiqueta, arriba de la lista de aplicaciones */
@@ -467,7 +455,7 @@ section h2 {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 1.5rem;
-  background: var(--color-accent-bg);
+  background: var(--color-surface);
 }
 
 .card h3 {
@@ -879,8 +867,12 @@ h2 + .status-card {
   margin-bottom: 2rem;
 }
 
+.app-destacada__nombre {
+  margin-bottom: 0.5rem;
+}
+
 .app-destacada h2 {
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-size: 1.5rem;
 }
 
@@ -891,4 +883,53 @@ h2 + .status-card {
 .app-destacada p {
   margin: 0;
   max-width: 40rem;
+}
+
+/* Íconos de las apps: los mismos SVG que el launcher de espacio, con las
+   esquinas al 22 % como allí. */
+.app-icono {
+  display: block;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 22%;
+}
+
+.app-card__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.app-card__cabecera h3 {
+  margin: 0;
+}
+
+.app-titulo,
+.app-destacada__nombre {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-titulo {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.app-titulo h2 {
+  margin: 0;
+}
+
+.app-titulo h1 {
+  margin: 0;
+}
+
+.app-titulo .app-icono {
+  width: 64px;
+  height: 64px;
+}
+
+.app-titulo .app-icono--espacio {
+  image-rendering: pixelated;
 }
