@@ -5,6 +5,16 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
 ## [Sin publicar]
 
+## [1.16.0] - 2026-11-13
+
+### Cambiado
+- El sitio se viste con el lenguaje visual de espacio: la misma paleta índigo, tipografía, radios y modo claro u oscuro según el sistema. Los colores vienen de la SDK de espacio y se traen con `npm run sincronizar:espacio`.
+- Cada aplicación muestra su ícono, el mismo del launcher de espacio, en su tarjeta y en su página. espacio lleva su ícono donde se habla de él.
+- La página de Estado muestra el consumo eléctrico del mes y el acumulado desde la primera lectura, como los entrega la API. Antes el acumulado aparecía como si fuera el consumo del día.
+
+### Corregido
+- La documentación había quedado sin estilos: ahora comparte la cabecera de página con el resto del sitio.
+
 ## [1.15.0] - 2026-11-12
 
 ### Cambiado

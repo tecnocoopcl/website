@@ -1,12 +1,13 @@
 {
   "name": "tecnocoop-website",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "Sitio web de Tecnocooperativa, Cooperativa para el Espacio Público Digital",
   "private": true,
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "sincronizar:espacio": "node scripts/sincronizar-espacio.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
