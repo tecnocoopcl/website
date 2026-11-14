@@ -1,17 +1,17 @@
 {
-  "version": "2.9.1",
+  "version": "2.9.2",
   "dmg": {
-    "file": "espacio-2.9.1-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.1-arm64.dmg",
-    "sha512": "TzVJ4WXwzWGaZpL9ORYPWzZLaGf2aXRlqcPqw38s1NB2o09rwXnry+byny5GKJ0Zc40K4MVbRkoRKOUc8kBfQA==",
-    "size": 127583544
+    "file": "espacio-2.9.2-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.2-arm64.dmg",
+    "sha512": "Qwi6Tl4tZrUoJaen7yUO+mByEf1HDOTEHqH7kpq5zHpGt4YEy8LTIl2+uQqmU86HSSfel52r+IadMKCBzqt18Q==",
+    "size": 127584664
   },
   "dmgX64": {
-    "file": "espacio-2.9.1-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.1-x64.dmg",
-    "sha512": "1Sg7ms+AGlXx4GnbozqXh8i/atemx3LgqOTw20lUdfDVBmvatl2k5P6/mNdokaFM/lrFq5YUuBoWR+eHTN6ssQ==",
-    "size": 134544912
+    "file": "espacio-2.9.2-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.2-x64.dmg",
+    "sha512": "RYDE2btXBeyhqYMgIFo+TeOQMJXvdqhj5aj6bURwIIAhljUJSfu+pbWgIB9zjcSondfRpy+Xcywy6HApbA8lUQ==",
+    "size": 134545619
   },
-  "notes": "Las actualizaciones pasan a consultarse en tecnocooperativa.cl, el nuevo dominio del sitio de la cooperativa.",
-  "date": "2026-11-12T21:53:05.787Z"
+  "notes": "Estudio enlaza la audioteca en audioteca.tecnocooperativa.cl.",
+  "date": "2026-11-14T01:04:37.435Z"
 }
