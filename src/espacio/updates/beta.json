@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.6",
+  "version": "3.0.0-beta.7",
   "dmg": {
-    "file": "espacio-3.0.0-beta.6-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.6-arm64.dmg",
-    "sha512": "S4YNHmNOVRMBFPltLY+3x+7DCleiSZrlZW7dtuMHQfLaIjZYsCtUbrnQzB8CXr+Uw3g9UyT4KD8p5M3N5qWVsg==",
-    "size": 127657854
+    "file": "espacio-3.0.0-beta.7-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.7-arm64.dmg",
+    "sha512": "oTggWWIAHJXHu3hZsNyrBqfcPlyNHnoa24gugxezHk5ikYuAJHbPRt3jGfFoEjkohQmZ7qLs8tmJ+W2pIgb8lg==",
+    "size": 127657939
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.6-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.6-x64.dmg",
-    "sha512": "mimAZpBjZPSXcwBW16uibd4d363Qg5AlPFQK/sGVfvF5l9SqwUUZcecjX7NSWQQaoTOBkw7c73gCH5MbTH7pxg==",
-    "size": 134617107
+    "file": "espacio-3.0.0-beta.7-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.7-x64.dmg",
+    "sha512": "TmFmk6BfH97hVz+UAfPWa8IeQwbzsxfyQUI4Nwan6IkqPaowyN8Dz0Pnf39WD2vpOBQ/3UYKAHoo2e2DYne8Vw==",
+    "size": 134617260
   },
-  "notes": "En Estudio, las piezas de una serie de la audioteca se numeran y se reordenan con ↑/↓. Estudio enlaza la audioteca en audioteca.tecnocooperativa.cl.",
-  "date": "2026-11-13T22:13:22.369Z"
+  "notes": "La Audioteca se abre en audioteca.tecnocooperativa.cl.",
+  "date": "2026-11-14T00:57:23.075Z"
 }
