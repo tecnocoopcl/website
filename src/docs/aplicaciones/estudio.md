@@ -1,12 +1,12 @@
 ---
 title: "Estudio"
-description: "Cómo usar Estudio en espacio: activar tu estudio, crear proyectos y obras, subir pistas y publicarlas en musica.aebn.cl."
+description: "Cómo usar Estudio en espacio: activar tu estudio, crear proyectos y obras, subir pistas y publicarlas en musica.tecnocooperativa.cl."
 order: 35
 ---
 
 # Estudio
 
-**Estudio** es la aplicación de espacio para publicar lo que haces: tu música en [musica.aebn.cl](/aplicaciones/musica/) y tus charlas, crónicas o relatos en la [Audioteca](/aplicaciones/audioteca/). Viene instalada con espacio.
+**Estudio** es la aplicación de espacio para publicar lo que haces: tu música en [musica.tecnocooperativa.cl](/aplicaciones/musica/) y tus charlas, crónicas o relatos en la [Audioteca](/aplicaciones/audioteca/). Viene instalada con espacio.
 
 Todo lo que subes queda en tu [Pod](/docs/pods/), en una carpeta con lectura pública. Los sitios de la cooperativa solo la leen: lo publicado sigue siendo tuyo.
 
@@ -27,7 +27,7 @@ Un **proyecto** es el nombre con el que publicas: tu nombre artístico, tu banda
 
 1. Haz clic en **+ Nuevo proyecto**, en la barra lateral.
 2. Escribe el **Nombre**.
-3. Revisa la **Dirección en el sitio de música**. Se propone sola desde el nombre (por ejemplo, `musica.aebn.cl/artista/tu-nombre`), pero puedes cambiarla. Va sin tildes, en minúscula y con guiones.
+3. Revisa la **Dirección en el sitio de música**. Se propone sola desde el nombre (por ejemplo, `musica.tecnocooperativa.cl/artista/tu-nombre`), pero puedes cambiarla. Va sin tildes, en minúscula y con guiones.
 4. Haz clic en **Crear proyecto**.
 
 <div class="note">
@@ -62,7 +62,7 @@ En **Dónde más escucharla** puedes añadir enlaces a otras plataformas, como B
 
 ## 5. Guarda y publica
 
-Haz clic en **Guardar**. Si sale **Guardado y publicado.**, ya está en musica.aebn.cl: abre el enlace bajo el nombre del proyecto para verlo.
+Haz clic en **Guardar**. Si sale **Guardado y publicado.**, ya está en musica.tecnocooperativa.cl: abre el enlace bajo el nombre del proyecto para verlo.
 
 Si te arrepientes de los cambios antes de guardar, usa **Descartar**.
 

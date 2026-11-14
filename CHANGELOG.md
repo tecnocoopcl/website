@@ -5,6 +5,9 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
 ## [Sin publicar]
 
+### Cambiado
+- Música se escucha en musica.tecnocooperativa.cl: el catálogo de aplicaciones, la página de Música y la documentación de Música y Estudio enlazan al dominio nuevo en vez de musica.aebn.cl.
+
 ## [1.16.1] - 2026-11-13
 
 ### Corregido

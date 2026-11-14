@@ -1,12 +1,12 @@
 ---
 title: "Música"
-description: "Cómo usar Música (musica.aebn.cl): buscar y escuchar, armar playlists, marcar artistas favoritos y guardarlos en tu Pod."
+description: "Cómo usar Música (musica.tecnocooperativa.cl): buscar y escuchar, armar playlists, marcar artistas favoritos y guardarlos en tu Pod."
 order: 45
 ---
 
 # Música
 
-**Música** es el sitio donde se escucha la música de los artistas de la cooperativa: [musica.aebn.cl](https://musica.aebn.cl). Puedes abrirla en el navegador o dentro de [espacio](/aplicaciones/espacio/), desde el catálogo de aplicaciones.
+**Música** es el sitio donde se escucha la música de los artistas de la cooperativa: [musica.tecnocooperativa.cl](https://musica.tecnocooperativa.cl). Puedes abrirla en el navegador o dentro de [espacio](/aplicaciones/espacio/), desde el catálogo de aplicaciones.
 
 No necesitas cuenta para escuchar. Con tu [WebID](/webid/), tus playlists y artistas favoritos se guardan en tu [Pod](/docs/pods/).
 
@@ -50,4 +50,4 @@ Tu biblioteca queda en `Aplicaciones/musica/biblioteca.json`. Música no publica
 
 ## ¿Quieres publicar tu música?
 
-La música del sitio no vive en musica.aebn.cl: cada artista la publica desde su propio Pod con [Estudio](/docs/aplicaciones/estudio/).
+La música del sitio no vive en musica.tecnocooperativa.cl: cada artista la publica desde su propio Pod con [Estudio](/docs/aplicaciones/estudio/).
