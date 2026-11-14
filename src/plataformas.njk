@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Plataformas
+description: "Las plataformas de Tecnocooperativa: Música, Audioteca y Academia, sitios públicos donde los socios publican su trabajo y cualquiera puede escucharlo o aprender, sin cuenta."
+permalink: /plataformas/
+---
+<section class="page-content">
+  <div class="wrap">
+    <h1>Plataformas</h1>
+    <p class="lede">Sitios públicos donde los socios de la cooperativa publican su trabajo y cualquiera puede escucharlo o aprender de él, sin cuenta. No son solo aplicaciones: reúnen lo que publican muchas personas, y cada una lo publica donde quiere, desde su propio <a href="/pods/">Pod</a> o su propio sitio.</p>
+
+    <div class="cards">
+      {% for app in aplicaciones.plataformas %}{% include "partials/app-card.njk" %}{% endfor %}
+    </div>
+
+    <h2>Cómo funcionan</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Lo publicado sigue siendo tuyo</h3>
+        <p>Tus audios, portadas y cursos quedan donde tú los publicas. La plataforma solo los lee y los presenta: si dejas de publicar, nada queda copiado en otro lado.</p>
+      </div>
+      <div class="card">
+        <h3>Cada una a su manera</h3>
+        <p>Con <a href="/aplicaciones/estudio/">Estudio</a>, en <a href="/aplicaciones/espacio/">espacio</a>, armas tus discos para Música y tus series para la Audioteca. Un curso de la Academia puede ser un PDF, una página interactiva o un kit: lo anuncia su ficha y la cooperativa lo suma al catálogo.</p>
+      </div>
+      <div class="card">
+        <h3>Abiertas a todos</h3>
+        <p>Para escuchar o aprender no necesitas cuenta. Con tu <a href="/webid/">WebID</a>, tus playlists y favoritos se guardan en tu Pod.</p>
+      </div>
+    </div>
+  </div>
+</section>

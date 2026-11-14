@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 ---
-{#- Landing de una aplicación en /aplicaciones/<id>/. Frontmatter: appId (la
+{#- Landing de una aplicación en /aplicaciones/<id>/ o de una plataforma en /plataformas/<id>/. Frontmatter: appId (la
     entrada de _data/aplicaciones.js), title, lede, donde y docsTitulo. -#}
 {%- set app = aplicaciones.porId[appId] -%}
 <section class="page-content">
   <div class="wrap">
-    <p class="migas"><a href="/aplicaciones/">Aplicaciones</a> / {{ app.name }}</p>
+    <p class="migas">{% if app.plataforma %}<a href="/plataformas/">Plataformas</a>{% else %}<a href="/aplicaciones/">Aplicaciones</a>{% endif %} / {{ app.name }}</p>
     <div class="app-titulo">
       <img class="app-icono" src="{{ app.icono }}" alt="" width="64" height="64">
       <h1>{{ app.name }}</h1>
@@ -15,14 +15,16 @@ layout: base.njk
     <p class="lede">{{ lede }}</p>
     <div class="app-acciones">
       {% if app.url %}<a class="btn btn-primary" href="{{ app.url }}" target="_blank" rel="noopener">Abrir {{ app.url | replace("https://", "") }}</a>{% endif %}
-      <a class="btn {% if app.url %}btn-secondary{% else %}btn-primary{% endif %}" href="{{ app.docs }}">Lee la documentación</a>
+      {% if app.docs %}<a class="btn {% if app.url %}btn-secondary{% else %}btn-primary{% endif %}" href="{{ app.docs }}">Lee la documentación</a>{% endif %}
     </div>
     <p class="app-donde">{{ donde | safe }}</p>
 
     {{ content | safe }}
 
+    {% if app.docs %}
     <nav class="siguiente" aria-label="Documentación">
       <a href="{{ app.docs }}"><span class="siguiente__etiqueta">Documentación</span><span class="siguiente__titulo">{{ docsTitulo }} →</span></a>
     </nav>
+    {% endif %}
   </div>
 </section>

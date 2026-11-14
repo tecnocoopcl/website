@@ -14,6 +14,7 @@ module.exports = {
         { text: "Pods", url: "/pods/" },
       ],
     },
+    { text: "Plataformas", url: "/plataformas/" },
     { text: "Aplicaciones", url: "/aplicaciones/" },
     { text: "Sobre nosotros", url: "/sobre/" },
     { text: "Documentación", url: "/docs/comenzando/crear-pod/" },

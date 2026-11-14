@@ -1,0 +1,29 @@
+---
+pagination:
+  data: redirecciones
+  size: 1
+  alias: r
+redirecciones:
+  - { desde: /aplicaciones/musica/, hacia: /plataformas/musica/, titulo: Música }
+  - { desde: /aplicaciones/audioteca/, hacia: /plataformas/audioteca/, titulo: Audioteca }
+  - { desde: /docs/aplicaciones/musica/, hacia: /docs/plataformas/musica/, titulo: Música }
+  - { desde: /docs/aplicaciones/audioteca/, hacia: /docs/plataformas/audioteca/, titulo: Audioteca }
+permalink: "{{ r.desde }}"
+eleventyExcludeFromCollections: true
+layout: null
+tags: []
+---
+{#- Música y Audioteca pasaron de Aplicaciones a Plataformas: las direcciones
+    anteriores siguen funcionando, como /espacio/. -#}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>{{ r.titulo }} · {{ site.name }}</title>
+  <link rel="canonical" href="{{ r.hacia }}">
+  <meta http-equiv="refresh" content="0; url={{ r.hacia }}">
+</head>
+<body>
+  <p>Esta página se movió a <a href="{{ r.hacia }}">{{ r.hacia }}</a>.</p>
+</body>
+</html>

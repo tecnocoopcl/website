@@ -1,12 +1,12 @@
 ---
 title: "Audioteca"
-description: "Cómo usar la Audioteca (audioteca.aebn.cl): escuchar por temática, suscribirte por RSS en tu app de podcasts y publicar tus audios desde Estudio."
-order: 20
+description: "Cómo usar la Audioteca (audioteca.tecnocooperativa.cl): escuchar por temática, suscribirte por RSS en tu app de podcasts y publicar tus audios desde Estudio."
+order: 4
 ---
 
 # Audioteca
 
-La **Audioteca** reúne charlas, crónicas, clases y relatos hechos por los socios de la cooperativa, ordenados por temática: [audioteca.aebn.cl](https://audioteca.aebn.cl). Cualquiera puede escucharla, sin cuenta.
+La **Audioteca** reúne charlas, crónicas, clases y relatos hechos por los socios de la cooperativa, ordenados por temática: [audioteca.tecnocooperativa.cl](https://audioteca.tecnocooperativa.cl). Cualquiera puede escucharla, sin cuenta.
 
 Esta guía tiene dos partes: [escuchar](#escuchar) y [publicar tus audios](#publica-tus-audios-desde-estudio).
 
@@ -53,7 +53,7 @@ Una **serie** agrupa piezas: un ciclo de charlas, un podcast, una colección de 
 
 1. Haz clic en **+ Nueva serie**.
 2. Escribe el **Título** y, si quieres, una **Descripción**.
-3. Revisa la **Dirección en la audioteca** (por ejemplo, `audioteca.aebn.cl/tu-cuenta/memoria-de-valparaiso`). Se propone sola desde el título.
+3. Revisa la **Dirección en la audioteca** (por ejemplo, `audioteca.tecnocooperativa.cl/tu-cuenta/memoria-de-valparaiso`). Se propone sola desde el título.
 4. Haz clic en **Crear serie**.
 
 Después puedes subir una portada con **Subir portada**.

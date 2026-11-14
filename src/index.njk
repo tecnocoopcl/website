@@ -32,6 +32,17 @@ description: "Tecnocooperativa es una cooperativa digital de software y hardware
   </div>
 </section>
 
+<section id="plataformas">
+  <div class="wrap">
+    <h2>Nuestras plataformas</h2>
+    <p>Sitios públicos donde los socios publican su trabajo y cualquiera puede escucharlo o aprender de él, sin cuenta.</p>
+    <div class="cards">
+      {% for app in aplicaciones.plataformas %}{% include "partials/app-card.njk" %}{% endfor %}
+    </div>
+    <p><a href="/plataformas/">Conoce las plataformas →</a></p>
+  </div>
+</section>
+
 <section id="servicios">
   <div class="wrap">
     <h2>Nuestros servicios</h2>

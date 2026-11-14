@@ -1,7 +1,7 @@
 ---
 title: "Música"
 description: "Cómo usar Música (musica.tecnocooperativa.cl): buscar y escuchar, armar playlists, marcar artistas favoritos y guardarlos en tu Pod."
-order: 45
+order: 4.5
 ---
 
 # Música

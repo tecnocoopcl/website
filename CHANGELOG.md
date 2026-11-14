@@ -5,7 +5,12 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
 ## [Sin publicar]
 
+### Agregado
+- Sección **Plataformas** (`/plataformas/`), en la navegación y en la portada, con Música, Audioteca y Academia: son sitios públicos donde los socios publican desde su Pod, no solo aplicaciones. Sus páginas pasan a `/plataformas/musica/` y `/plataformas/audioteca/`, y sus guías a la sección Plataformas de la documentación. Las direcciones anteriores en `/aplicaciones/` y `/docs/aplicaciones/` redirigen a las nuevas.
+- La **Academia** (academia.tecnocooperativa.cl) tiene su página en `/plataformas/academia/`: el catálogo de cursos de los socios, públicos y gratuitos. Todavía sin guía en la documentación.
+
 ### Cambiado
+- La Audioteca se escucha en audioteca.tecnocooperativa.cl: la tarjeta, su página y su guía enlazaban todavía a audioteca.aebn.cl, que ya no existe.
 - Música se escucha en musica.tecnocooperativa.cl: el catálogo de aplicaciones, la página de Música y la documentación de Música y Estudio enlazan al dominio nuevo en vez de musica.aebn.cl.
 
 ## [1.16.1] - 2026-11-13

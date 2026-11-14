@@ -395,6 +395,12 @@ a {
   margin-top: 0;
 }
 
+/* Aviso arriba de la lista de aplicaciones: Música y Audioteca están en Plataformas. */
+.aviso-plataformas {
+  margin: 0 0 1.5rem;
+  color: var(--color-muted);
+}
+
 /* Qué significa cada etiqueta, arriba de la lista de aplicaciones */
 .categorias {
   display: grid;
