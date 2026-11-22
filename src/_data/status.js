@@ -1,4 +1,4 @@
-// Último dato conocido de status-tc.aebn.cl, para cuando la API no responde.
+// Último dato conocido de api.tecnocooperativa.cl, para cuando la API no responde.
 // src/js/status.js lo reemplaza con los datos en vivo.
 module.exports = {
   date: "2026-11-13",

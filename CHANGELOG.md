@@ -10,6 +10,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 - La **Academia** (academia.tecnocooperativa.cl) tiene su página en `/plataformas/academia/`: el catálogo de cursos de los socios, públicos y gratuitos. Todavía sin guía en la documentación.
 
 ### Cambiado
+- La página **Estado** lee la API de la cooperativa en `api.tecnocooperativa.cl` (antes `status-tc.aebn.cl`).
 - La Audioteca se escucha en audioteca.tecnocooperativa.cl: la tarjeta, su página y su guía enlazaban todavía a audioteca.aebn.cl, que ya no existe.
 - Música se escucha en musica.tecnocooperativa.cl: el catálogo de aplicaciones, la página de Música y la documentación de Música y Estudio enlazan al dominio nuevo en vez de musica.aebn.cl.
 

@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  var METRICS_URL = "https://status-tc.aebn.cl/";
-  var HEALTHZ_URL = "https://status-tc.aebn.cl/healthz";
+  var METRICS_URL = "https://api.tecnocooperativa.cl/";
+  var HEALTHZ_URL = "https://api.tecnocooperativa.cl/healthz";
   var CACHE_KEY = "tecnocoop:estado-cache:v1";
 
   function readCache() {
@@ -118,13 +118,13 @@
     var note = document.querySelector('[data-field="source-note"]');
     if (note) {
       note.textContent = fromCache
-        ? "Mostrando el último dato disponible en caché; no se pudo contactar status-tc.aebn.cl."
-        : "Datos en vivo desde status-tc.aebn.cl.";
+        ? "Mostrando el último dato disponible en caché; no se pudo contactar api.tecnocooperativa.cl."
+        : "Datos en vivo desde api.tecnocooperativa.cl.";
     }
   }
 
   function markUnreachable() {
-    setNavStatus("unknown", "Estado: no se pudo contactar status-tc.aebn.cl");
+    setNavStatus("unknown", "Estado: no se pudo contactar api.tecnocooperativa.cl");
     var banner = document.querySelector('[data-field="overall-banner"]');
     if (banner) {
       banner.classList.remove("status-banner--ok", "status-banner--down");
@@ -134,7 +134,7 @@
     var note = document.querySelector('[data-field="source-note"]');
     if (note) {
       note.textContent =
-        "No se pudo contactar status-tc.aebn.cl y no hay datos en caché. Mostrando la última información conocida en el sitio.";
+        "No se pudo contactar api.tecnocooperativa.cl y no hay datos en caché. Mostrando la última información conocida en el sitio.";
     }
   }
 
