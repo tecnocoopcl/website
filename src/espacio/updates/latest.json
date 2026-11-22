@@ -1,17 +1,17 @@
 {
-  "version": "2.9.2",
+  "version": "2.10.0",
   "dmg": {
-    "file": "espacio-2.9.2-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.2-arm64.dmg",
-    "sha512": "Qwi6Tl4tZrUoJaen7yUO+mByEf1HDOTEHqH7kpq5zHpGt4YEy8LTIl2+uQqmU86HSSfel52r+IadMKCBzqt18Q==",
-    "size": 127584664
+    "file": "espacio-2.10.0-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.10.0-arm64.dmg",
+    "sha512": "UtbvnoW6FtK0ImPMQT5q+Esy8NfC7JSh72Q6FY1AUZUdfdU176oWHXTDe0DjJYmjV8cge7jmgqbHEPLSqN3M2A==",
+    "size": 127577814
   },
   "dmgX64": {
-    "file": "espacio-2.9.2-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.9.2-x64.dmg",
-    "sha512": "RYDE2btXBeyhqYMgIFo+TeOQMJXvdqhj5aj6bURwIIAhljUJSfu+pbWgIB9zjcSondfRpy+Xcywy6HApbA8lUQ==",
-    "size": 134545619
+    "file": "espacio-2.10.0-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-2.10.0-x64.dmg",
+    "sha512": "G8xUSFvTGbH5lBWcTwkIUlXlJ2AqIROGs4/aP52OKpv3VXTcw9hwX2/VjrT6nMczvhP+1MoIJgkZ2TjedzlxPw==",
+    "size": 134555663
   },
-  "notes": "Estudio enlaza la audioteca en audioteca.tecnocooperativa.cl.",
-  "date": "2026-11-14T01:04:37.435Z"
+  "notes": "La API de la cooperativa pasa a api.tecnocooperativa.cl. Nueva aplicación Trenzador para trabajar corpus etnográficos.",
+  "date": "2026-11-22T19:50:48.594Z"
 }
