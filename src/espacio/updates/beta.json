@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.7",
+  "version": "3.0.0-beta.8",
   "dmg": {
-    "file": "espacio-3.0.0-beta.7-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.7-arm64.dmg",
-    "sha512": "oTggWWIAHJXHu3hZsNyrBqfcPlyNHnoa24gugxezHk5ikYuAJHbPRt3jGfFoEjkohQmZ7qLs8tmJ+W2pIgb8lg==",
-    "size": 127657939
+    "file": "espacio-3.0.0-beta.8-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.8-arm64.dmg",
+    "sha512": "Nhf6JEOjSiA0qo2KC8w+IC3YrrlC9ePOA8gW29mpxnoF+jmD5pWtbWOZggy1LoTiE54XGf0HYIntl+YWfOVxOA==",
+    "size": 127658047
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.7-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.7-x64.dmg",
-    "sha512": "TmFmk6BfH97hVz+UAfPWa8IeQwbzsxfyQUI4Nwan6IkqPaowyN8Dz0Pnf39WD2vpOBQ/3UYKAHoo2e2DYne8Vw==",
-    "size": 134617260
+    "file": "espacio-3.0.0-beta.8-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.8-x64.dmg",
+    "sha512": "zE3Z9s9upmfK3vWCZN26KimUWGtT46hSJkcvbcZLOkjA0hewbafOBsNivvO/uE78BhG7rXFcuz0EME6YhtHl7w==",
+    "size": 134617928
   },
-  "notes": "La Audioteca se abre en audioteca.tecnocooperativa.cl.",
-  "date": "2026-11-14T00:57:23.075Z"
+  "notes": "La API de la cooperativa pasa a api.tecnocooperativa.cl.",
+  "date": "2026-11-22T19:55:12.829Z"
 }
