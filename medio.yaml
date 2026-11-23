@@ -1,0 +1,9 @@
+# Despliegue en medio (la plataforma de la tecnocooperativa).
+nombre: web
+puerto: 8080
+salud: /
+recursos: { cpu: 0.1, memoria: 32Mi }
+politicas:
+  clase: siempre
+dominios: [tecnocooperativa.cl, www.tecnocooperativa.cl]
+ramas: [main]

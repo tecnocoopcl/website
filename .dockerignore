@@ -1,0 +1,6 @@
+node_modules
+_site
+.git
+.cache
+.claude
+.DS_Store
