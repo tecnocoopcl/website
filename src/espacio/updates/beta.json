@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.8",
+  "version": "3.0.0-beta.9",
   "dmg": {
-    "file": "espacio-3.0.0-beta.8-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.8-arm64.dmg",
-    "sha512": "Nhf6JEOjSiA0qo2KC8w+IC3YrrlC9ePOA8gW29mpxnoF+jmD5pWtbWOZggy1LoTiE54XGf0HYIntl+YWfOVxOA==",
-    "size": 127658047
+    "file": "espacio-3.0.0-beta.9-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.9-arm64.dmg",
+    "sha512": "3v7NW9QkWgVkKLkk6/7fXUf3B5Frmqcwazb+1EwxGo707qgi+pdYsqHJRd0SQAg7RNRqbVqAl6RVphh7sAtJ8w==",
+    "size": 127679078
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.8-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.8-x64.dmg",
-    "sha512": "zE3Z9s9upmfK3vWCZN26KimUWGtT46hSJkcvbcZLOkjA0hewbafOBsNivvO/uE78BhG7rXFcuz0EME6YhtHl7w==",
-    "size": 134617928
+    "file": "espacio-3.0.0-beta.9-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.9-x64.dmg",
+    "sha512": "HF8B8zBr5BJCtnFRJyNvYjCWsaUadVuEcDYfw8TzIjxM0DJhe8zv22Gjattvg1e8cJY0/fmX10sxwQkHr5upbQ==",
+    "size": 134629858
   },
-  "notes": "La API de la cooperativa pasa a api.tecnocooperativa.cl.",
-  "date": "2026-11-22T19:55:12.829Z"
+  "notes": "Presentaciones e IA, dos apps nuevas; el estado de la cooperativa muestra máquinas y servicios; la Música se abre en musica.tecnocooperativa.cl.",
+  "date": "2026-11-23T20:49:38.921Z"
 }
