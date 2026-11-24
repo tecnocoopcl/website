@@ -347,6 +347,13 @@ button.btn {
   text-align: center;
 }
 
+.descarga-beta {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
 .captura {
   margin: 2rem 0;
 }

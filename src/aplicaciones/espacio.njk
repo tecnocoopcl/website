@@ -17,6 +17,12 @@ permalink: /aplicaciones/espacio/
       {% include "partials/descarga.njk" %}
     </div>
     <p class="split-btn__hint descarga">Versión {{ espacio.version }}, <a href="/docs/comenzando/instalar-espacio/">Guía de instalación</a></p>
+    {% if espacio.beta %}
+    <p class="descarga-beta" id="beta">
+      <strong>Versión beta {{ espacio.beta.version }}</strong>: prueba lo que viene antes que nadie. Puede tener errores.<br>
+      <a href="{{ espacio.beta.dmgUrl }}">Mac Apple Silicon</a>{% if espacio.beta.dmgIntelUrl %} · <a href="{{ espacio.beta.dmgIntelUrl }}">Mac Intel</a>{% endif %} · <a href="{{ espacio.beta.windowsUrl }}">Windows</a> · <a href="{{ espacio.beta.ubuntuUrl }}">Ubuntu</a>
+    </p>
+    {% endif %}
 
     <figure class="captura">
       <img src="/static/imagenes/espacio.png" alt="Pantalla de inicio de espacio con sus aplicaciones: Archivos, Escribir, Estudio, Archivador, Música, Notas y Por Hacer">

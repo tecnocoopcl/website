@@ -78,6 +78,8 @@ Windows SmartScreen advierte sobre los programas que no están firmados con un c
 
 En Windows espacio todavía no se actualiza sola. Para pasar a una versión nueva, descarga el instalador nuevo y ábrelo: se instala encima de la anterior y conserva tu sesión.
 
+{% if espacio.beta %}Si quieres probar la versión beta ({{ espacio.beta.version }}), descarga [el instalador beta para Windows]({{ espacio.beta.windowsUrl }}) y ábrelo de la misma forma. Encuentras la beta para los demás sistemas en la [página de espacio](/aplicaciones/espacio/#beta).{% endif %}
+
 ### Desinstalar
 
 En **Configuración → Aplicaciones → Aplicaciones instaladas**, busca **espacio** y elige **Desinstalar**.

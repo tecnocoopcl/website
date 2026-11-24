@@ -53,7 +53,7 @@ description: "Tecnocooperativa: tus datos en un lugar tuyo, una identidad que es
         {% include "partials/descarga.njk" %}
         <a class="btn btn-secondary" href="/aplicaciones/">Ver las aplicaciones</a>
       </div>
-      <p class="split-btn__hint"><a href="/docs/comenzando/instalar-espacio/">Guía de instalación</a></p>
+      <p class="split-btn__hint"><a href="/docs/comenzando/instalar-espacio/">Guía de instalación</a>{% if espacio.beta %} · <a href="/aplicaciones/espacio/#beta">Descarga la beta {{ espacio.beta.version }}</a>{% endif %}</p>
     </div>
   </div>
 </section>
