@@ -6,7 +6,7 @@ order: 27
 
 # Encuestador
 
-**Encuestador** es la aplicación de espacio para crear encuestas y reunir las respuestas en tu [Pod](/docs/pods/). Viene instalada con espacio.
+**Encuestador** es la aplicación de espacio para crear encuestas y reunir las respuestas en tu [Pod](/docs/glosario/#pod). Viene instalada con espacio.
 
 <div class="note">
   <p><strong>Encuestador está en etapa temprana.</strong> Las respuestas son anónimas y no hay control de duplicados: una misma persona puede responder más de una vez.</p>
@@ -38,7 +38,7 @@ Agrega preguntas con **+ Agregar pregunta** y quita las que sobren con **Elimina
 
 ## 3. Publica y comparte el enlace
 
-Al hacer clic en **Publicar**, la encuesta queda disponible en [encuestador.aebn.cl](https://encuestador.aebn.cl/). En la lista de encuestas aparece marcada como **Publicada**, con el enlace **Abrir formulario público ↗**: ábrelo y copia la dirección para compartirla.
+Al hacer clic en **Publicar**, la encuesta queda disponible en [encuestador.tecnocooperativa.cl](https://encuestador.tecnocooperativa.cl/). En la lista de encuestas aparece marcada como **Publicada**, con el enlace **Abrir formulario público ↗**: ábrelo y copia la dirección para compartirla.
 
 Quien abre el enlace ve el formulario, responde, pasa una verificación breve contra bots y hace clic en **Enviar respuesta**.
 

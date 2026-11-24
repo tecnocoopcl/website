@@ -5,5 +5,19 @@
   <meta name="description" content="{{ description or site.tagline }}">
   <meta name="theme-color" content="#12131a" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  {#- Al compartir un enlace (WhatsApp, redes, chats) se ve el título y el resumen. -#}
+  {% set urlAbsoluta = site.url + page.url %}
+  {% set esEntrada = tags and "blog" in tags %}
+  <link rel="canonical" href="{{ urlAbsoluta }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:type" content="{{ 'article' if esEntrada else 'website' }}">
+  <meta property="og:title" content="{{ title if title and title != 'Inicio' else site.name + ', ' + site.tagline | lower }}">
+  <meta property="og:description" content="{{ resumen or description or site.tagline }}">
+  <meta property="og:url" content="{{ urlAbsoluta }}">
+  {#- Falta og:image: la cooperativa todavía no tiene un logo o imagen para compartir. -#}
+  <meta name="twitter:card" content="summary">
+  {% if esEntrada %}<meta property="article:published_time" content="{{ page.date | fechaIso }}">{% endif %}
+  {% if not produccion %}<link rel="alternate" type="application/atom+xml" title="Blog de {{ site.name }}" href="/feed.xml">{% endif %}
   <link rel="stylesheet" href="/css/espacio/tema.css?v={{ pkg.version }}">
   <link rel="stylesheet" href="/css/style.css?v={{ pkg.version }}">

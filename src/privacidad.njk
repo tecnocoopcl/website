@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Privacidad
+description: "Qué datos ve y guarda Tecnocooperativa: en este sitio, en tu Pod, en las plataformas y en la API. Sin publicidad, sin rastreadores."
+permalink: /privacidad/
+---
+{#- Lo técnico (qué registra la API, cómo se cuentan las escuchas) está
+    verificado contra el código de tecno-cooperativa-backend al 24-11-2026.
+    Si cambia el backend, se revisa esta página. -#}
+<section class="page-content">
+  <div class="wrap columna">
+    <h1>Privacidad</h1>
+    <p class="lede">Una cooperativa cuyo argumento es «tus datos son tuyos» tiene que decir con claridad qué ve y qué guarda. Esto es lo que pasa hoy con tus datos.</p>
+    <p class="columna__firma">Última actualización: <time datetime="2026-11-24">24 de noviembre de 2026</time></p>
+
+    <h2>Lo corto</h2>
+    <ul>
+      <li>No hay publicidad, no vendemos datos y este sitio no usa cookies ni rastreadores.</li>
+      <li>Tus datos viven en tu Pod. Las aplicaciones y plataformas los leen ahí; no se los llevan.</li>
+      <li>Tu Pod está en un servidor de la cooperativa. Quienes lo administran tienen acceso técnico al disco, como en cualquier servicio de alojamiento.</li>
+    </ul>
+
+    <h2>Este sitio</h2>
+    <p>Este sitio no usa cookies, analítica ni rastreadores de terceros. Hoy se sirve desde GitHub Pages, que, como cualquier servidor web, registra datos técnicos de cada visita, como la dirección IP. Estamos llevando el sitio a <a href="/docs/glosario/#medio">medio</a>, nuestra propia infraestructura.</p>
+    <p>La página de <a href="/estado/">Estado</a> consulta nuestra API y las plataformas desde tu navegador, y guarda el último resultado en el almacenamiento local de tu navegador, para mostrarlo si la API no responde. Ese dato no sale de tu computador.</p>
+
+    <h2>Tu Pod</h2>
+    <p>Tu Pod guarda tus carpetas, tus archivos y los datos de cada aplicación en un servidor de la cooperativa. Tú decides qué personas y qué aplicaciones pueden ver cada cosa, y puedes quitar ese acceso cuando quieras.</p>
+    <p>Lo que marques como público, como tu perfil o lo que publiques en las plataformas, lo puede leer cualquiera.</p>
+    <p>Quienes administran el servidor tienen acceso técnico al disco donde están los Pods. Solo entramos para mantener el servicio funcionando, por ejemplo para respaldos o reparar una falla, nunca para mirar tu contenido.</p>
+
+    <h2>La API de la cooperativa</h2>
+    <p>Las plataformas y algunas aplicaciones usan nuestra API, en <code>api.tecnocooperativa.cl</code>. Esto es lo que guarda:</p>
+    <ul>
+      <li><strong>Registro técnico de pedidos.</strong> Por cada pedido queda una línea con la hora, la página pedida, el resultado, la dirección IP, el navegador y el país. Sirve para detectar fallas y abusos.</li>
+      <li><strong>Quién publica en las plataformas.</strong> Cuando publicas en Música o en la Audioteca desde Estudio, la API anota tu cuenta y la dirección de tu Pod, y lee lo que publicaste para armar el catálogo.</li>
+      <li><strong>Escuchas, de forma anónima.</strong> Cuenta cuántas veces se escuchó cada pista o pieza, en total y por día. No guarda quién escuchó: la dirección IP se usa solo en memoria, unos minutos, para no contar dos veces la misma escucha, y nunca se escribe en el disco.</li>
+      <li><strong>Encuestas.</strong> La API anota qué encuestas existen y en qué Pod están. Las respuestas se guardan en el Pod de quien creó la encuesta, no en la API.</li>
+    </ul>
+
+    <h2>Si nos escribes</h2>
+    <p>Los correos que nos mandas a <a href="mailto:{{ site.correo }}">{{ site.correo }}</a> los leen las personas que coordinan la cooperativa, y los usamos solo para responderte.</p>
+
+    <h2>Preguntas o solicitudes</h2>
+    <p>Si quieres saber qué datos tuyos tenemos, pedir que borremos algo o tienes cualquier duda, escríbenos a <a href="mailto:{{ site.correo }}?subject=Privacidad">{{ site.correo }}</a>.</p>
+  </div>
+</section>

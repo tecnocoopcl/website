@@ -2,15 +2,17 @@
 <html lang="es">
 <head>
 {% include "partials/head.njk" %}
-  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+  <title>{% if title %}{{ title }}, {% endif %}{{ site.name }}</title>
 </head>
 <body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
   {% include "partials/nav.njk" %}
-  <main>
+  <main id="contenido" tabindex="-1">
     {{ content | safe }}
   </main>
   {% include "partials/footer.njk" %}
   <script src="/js/nav.js" defer></script>
   <script src="/js/status.js" defer></script>
+  <script src="/js/copiar.js" defer></script>
 </body>
 </html>

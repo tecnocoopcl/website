@@ -8,7 +8,7 @@ order: 35
 
 **Estudio** es la aplicación de espacio para publicar lo que haces: tu música en [musica.tecnocooperativa.cl](/plataformas/musica/) y tus charlas, crónicas o relatos en la [Audioteca](/plataformas/audioteca/). Viene instalada con espacio.
 
-Todo lo que subes queda en tu [Pod](/docs/pods/), en una carpeta con lectura pública. Los sitios de la cooperativa solo la leen: lo publicado sigue siendo tuyo.
+Todo lo que subes queda en tu [Pod](/docs/glosario/#pod), en una carpeta con lectura pública. Los sitios de la cooperativa solo la leen: lo publicado sigue siendo tuyo.
 
 Para usarla necesitas haber [conectado espacio con tu WebID](/docs/comenzando/conectar-espacio/). Arriba tiene dos secciones, **Música** y **Audioteca**. Esta guía cubre la música; para la otra, revisa [Publica en la Audioteca](/docs/plataformas/audioteca/#publica-tus-audios-desde-estudio).
 

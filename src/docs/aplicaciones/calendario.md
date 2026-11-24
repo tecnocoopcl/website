@@ -6,7 +6,7 @@ order: 25
 
 # Calendario
 
-**Calendario** guarda tus eventos en tu [Pod](/docs/pods/), con vistas de mes, semana y día. Viene instalada con espacio.
+**Calendario** guarda tus eventos en tu [Pod](/docs/glosario/#pod), con vistas de mes, semana y día. Viene instalada con espacio.
 
 <div class="note">
   <p><strong>Calendario está en etapa temprana.</strong> Todavía no tiene recordatorios ni invitados, y no importa ni exporta archivos <code>.ics</code>.</p>

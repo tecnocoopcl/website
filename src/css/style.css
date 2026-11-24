@@ -150,9 +150,9 @@ a {
      del menú queda exactamente sobre el border-bottom del header, para
      que ambas líneas coincidan en vez de dejar un espacio o un corte. */
   top: calc(100% + 1rem);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   min-width: 140px;
+  text-align: left;
   padding: 0.4rem;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
@@ -192,7 +192,8 @@ a {
   background: var(--color-accent-bg);
 }
 
-.nav .nav-item--dropdown:hover .nav-dropdown-menu,
+/* Se abre solo con clic, Enter o Espacio (js/nav.js), no al pasar el mouse:
+   así no se despliega sin querer ni tapa lo que se está leyendo. */
 .nav .nav-dropdown-toggle[aria-expanded="true"] ~ .nav-dropdown-menu {
   display: flex;
 }
@@ -227,6 +228,17 @@ a {
   border-radius: var(--radius-control);
   text-decoration: none;
   font-weight: 600;
+}
+
+/* Los .btn que son <button> y no enlaces. */
+button.btn {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn[hidden] {
+  display: none;
 }
 
 .btn-primary {
@@ -493,6 +505,49 @@ section h2 {
   margin: 0.25rem 0;
 }
 
+.site-footer__mapa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-footer .brand {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer h2 {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer li {
+  margin: 0.3rem 0;
+}
+
+.site-footer__mapa a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.site-footer__mapa a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.site-footer__legal {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
 /* Page content */
 .page-content {
   padding: 2.5rem 0;
@@ -526,6 +581,358 @@ section h2 {
   margin: 1.5rem 0;
 }
 
+/* Casos de uso */
+.testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.testimonio {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  background: var(--color-surface);
+}
+
+.testimonio h2,
+.testimonio h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.testimonio blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-primary);
+  font-size: 1.05rem;
+}
+
+.testimonio blockquote p {
+  margin: 0;
+}
+
+.testimonio__firma {
+  margin-bottom: 0.25rem;
+}
+
+.testimonio__usa {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+/* Columna de opinión */
+.columna {
+  max-width: 42rem;
+}
+
+.columna p {
+  font-size: 1.05rem;
+}
+
+.columna h2 {
+  font-size: 1.35rem;
+  margin: 2.25rem 0 0.5rem;
+}
+
+.columna__seccion {
+  color: var(--color-primary);
+  font-size: 0.95rem !important;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.columna .lede {
+  margin-bottom: 0.75rem;
+}
+
+.columna__firma {
+  color: var(--color-muted);
+  font-size: 0.95rem !important;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 1.5rem;
+}
+
+.columna__volver {
+  margin-top: 2.5rem;
+  font-size: 0.95rem !important;
+}
+
+/* Saltar al contenido: invisible hasta que llega el foco del teclado. */
+.saltar {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-control);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.saltar:focus {
+  top: 0.75rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Botón Súmate en la navegación */
+.nav a.nav-cta {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-control);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  font-weight: 600;
+}
+
+.nav a.nav-cta:hover,
+.nav a.nav-cta[aria-current="page"] {
+  color: var(--color-primary-text);
+  filter: brightness(1.1);
+}
+
+.nav ul {
+  align-items: center;
+}
+
+/* El menú desplegable es una columna: los ítems ocupan todo el ancho y su
+   texto queda a la izquierda, no centrado. */
+.nav ul.nav-dropdown-menu {
+  align-items: stretch;
+}
+
+/* Portada */
+.hero p.hero__marca {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* Pasos numerados (Cómo funciona, portada) */
+.pasos {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.paso {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  background: var(--color-surface);
+}
+
+.paso h2,
+.paso h3 {
+  font-size: 1.15rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.paso p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.paso__numero {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-accent-bg);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Recorrido de Empieza aquí */
+.recorrido {
+  counter-reset: paso;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.recorrido__paso {
+  counter-increment: paso;
+  position: relative;
+  padding: 0 0 1.75rem 3.25rem;
+  border-left: 2px solid var(--color-border);
+  margin-left: 1rem;
+}
+
+.recorrido__paso:last-child {
+  border-left-color: transparent;
+}
+
+.recorrido__paso::before {
+  content: counter(paso);
+  position: absolute;
+  left: -1.05rem;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  font-weight: 700;
+}
+
+.recorrido__paso h2 {
+  font-size: 1.3rem;
+  margin: 0.15rem 0 0.5rem;
+}
+
+.recorrido__paso p {
+  margin: 0.4rem 0;
+}
+
+.recorrido__resultado {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.cta--izquierda {
+  text-align: left;
+}
+
+.cta--izquierda .btn-row {
+  justify-content: flex-start;
+}
+
+/* Notas de versión de espacio */
+.notas__ayuda {
+  color: var(--color-muted);
+  max-width: 42rem;
+}
+
+.serie {
+  max-width: 42rem;
+  margin: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.serie > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.serie > summary::-webkit-details-marker {
+  display: none;
+}
+
+.serie > summary h2 {
+  display: inline;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.serie > summary::after {
+  content: "+";
+  float: right;
+  font-size: 1.5rem;
+  color: var(--color-muted);
+}
+
+.serie[open] > summary::after {
+  content: "−";
+}
+
+.serie__intro {
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+.notas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nota {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.nota h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
+}
+
+.nota__fecha {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.nota__resumen {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.nota ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.nota li {
+  margin: 0.4rem 0;
+}
+
+.nota__ojo {
+  color: var(--color-degraded);
+}
+
+/* Blog */
+.entradas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 42rem;
+}
+
+.entrada {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.entrada h2 {
+  font-size: 1.4rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.entrada h2 a {
+  text-decoration: none;
+}
+
+.entrada h2 a:hover {
+  text-decoration: underline;
+}
+
+.entrada p {
+  margin: 0.25rem 0;
+}
+
+.entrada__meta,
+.entrada__autor {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
 /* Status page */
 .status-banner {
   display: flex;
@@ -535,6 +942,11 @@ section h2 {
   border-radius: var(--radius);
   font-weight: 600;
   margin: 1.5rem 0 2.5rem;
+}
+
+.status-banner--unknown {
+  background: var(--color-accent-bg);
+  color: var(--color-muted);
 }
 
 .status-banner--ok {
@@ -701,9 +1113,7 @@ h2 + .status-card {
 }
 
 .docs-sidebar__section h2 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.9rem;
   color: var(--color-muted);
   margin: 1.5rem 0 0.5rem;
 }
@@ -752,14 +1162,17 @@ h2 + .status-card {
   margin-top: 0;
 }
 
-.docs-content__inner table {
+.docs-content__inner table,
+.page-content table {
   border-collapse: collapse;
   width: 100%;
   margin: 1.5rem 0;
 }
 
 .docs-content__inner th,
-.docs-content__inner td {
+.docs-content__inner td,
+.page-content th,
+.page-content td {
   border: 1px solid var(--color-border);
   padding: 0.5rem 0.75rem;
   text-align: left;

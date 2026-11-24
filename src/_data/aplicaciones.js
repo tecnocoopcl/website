@@ -13,17 +13,17 @@
 // /aplicaciones/; Música sigue en la de espacio porque también se abre dentro
 // de él. `sinGuia` marca las que todavía no tienen guía en /docs/.
 const apps = [
-  { id: "archivos", name: "Archivos", tipos: ["nativa", "web"], url: "https://archivos.aebn.cl", description: "Navega, sube y descarga los archivos y carpetas de tu Pod, y compártelos con otras personas." },
+  { id: "archivos", name: "Archivos", tipos: ["nativa", "web"], url: "https://archivos.tecnocooperativa.cl", description: "Navega, sube y descarga los archivos y carpetas de tu Pod, y compártelos con otras personas." },
   { id: "escribir", name: "Escribir", tipos: ["nativa"], description: "Procesador de texto en Markdown. Tus documentos quedan en la carpeta Documentos de tu Pod." },
   { id: "estudio", name: "Estudio", tipos: ["nativa"], description: "Publica desde tu Pod tu música, que se escucha en musica.tecnocooperativa.cl, y tus charlas o relatos para la Audioteca." },
-  { id: "arbol", name: "Árbol", tipos: ["nativa"], temprana: true, description: "Tus enlaces en una página pública, servida en arbol.aebn.cl." },
+  { id: "arbol", name: "Árbol", tipos: ["nativa"], temprana: true, description: "Tus enlaces en una página pública, servida en arbol.tecnocooperativa.cl." },
   { id: "calendario", name: "Calendario", tipos: ["nativa"], temprana: true, description: "Tus eventos guardados en tu Pod, con vistas de mes, semana y día." },
   { id: "encuestador", name: "Encuestador", tipos: ["nativa"], temprana: true, description: "Crea encuestas, compártelas con un enlace público y revisa las respuestas, que quedan en tu Pod." },
   { id: "hojas", name: "Hojas", tipos: ["nativa"], temprana: true, description: "Tablas enlazadas por fórmulas, guardadas junto a tus documentos." },
-  { id: "por-hacer", name: "Por Hacer", tipos: ["nativa", "web"], url: "https://por-hacer.aebn.cl", description: "Lista de tareas que se sincroniza con tu Pod." },
-  { id: "notas", name: "Notas", tipos: ["nativa", "web"], url: "https://notas.aebn.cl", description: "Notas en Markdown enlazadas entre sí con [[corchetes dobles]]." },
+  { id: "por-hacer", name: "Por Hacer", tipos: ["nativa", "web"], url: "https://por-hacer.tecnocooperativa.cl", description: "Lista de tareas que se sincroniza con tu Pod." },
+  { id: "notas", name: "Notas", tipos: ["nativa", "web"], url: "https://notas.tecnocooperativa.cl", description: "Notas en Markdown enlazadas entre sí con [[corchetes dobles]]." },
   { id: "musica", name: "Música", plataforma: true, tipos: ["nativa", "web"], url: "https://musica.tecnocooperativa.cl", description: "Escucha la música de la cooperativa; tus playlists y artistas favoritos quedan en tu Pod." },
-  { id: "archivador", name: "Archivador", tipos: ["nativa", "web"], temprana: true, url: "https://archivador.aebn.cl", description: "Referencias y PDF al estilo de Zotero, con destacados y notas." },
+  { id: "archivador", name: "Archivador", tipos: ["nativa", "web"], temprana: true, url: "https://archivador.tecnocooperativa.cl", description: "Referencias y PDF al estilo de Zotero, con destacados y notas." },
   { id: "academia", name: "Academia", plataforma: true, sinGuia: true, tipos: ["web"], temprana: true, url: "https://academia.tecnocooperativa.cl", description: "Los cursos de los socios, públicos y gratuitos, cada uno en el formato que su profe eligió. Las clases con el profe se piden aparte." },
   { id: "audioteca", name: "Audioteca", plataforma: true, tipos: ["web"], url: "https://audioteca.tecnocooperativa.cl", description: "Charlas, crónicas, clases y relatos de los socios, ordenados por temática y con feed para tu app de podcasts." },
 ]

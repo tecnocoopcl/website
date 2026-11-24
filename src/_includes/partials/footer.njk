@@ -1,5 +1,21 @@
 <footer class="site-footer">
-  <div class="wrap site-footer__inner">
-    <p>{{ site.legalName }} · {{ site.etapa }} · <a href="/sobre/#estado">Saber más</a></p>
+  <div class="wrap">
+    <div class="site-footer__mapa">
+      <div class="site-footer__col">
+        <p><span class="brand">{{ site.name }}</span>, {{ site.tagline | lower }}</p>
+        <p>Escríbenos a <a href="mailto:{{ site.correo }}">{{ site.correo }}</a></p>
+      </div>
+      {% for grupo in site.footer %}
+      <nav class="site-footer__col" aria-label="{{ grupo.titulo }}">
+        <h2>{{ grupo.titulo }}</h2>
+        <ul>
+          {% for enlace in grupo.enlaces %}{% if not (enlace.pronto and produccion) %}
+          <li><a href="{{ enlace.url }}">{{ enlace.text }}</a></li>
+          {% endif %}{% endfor %}
+        </ul>
+      </nav>
+      {% endfor %}
+    </div>
+    <p class="site-footer__legal">{{ site.legalName }}, {{ site.etapa }}, <a href="/sobre/#estado">¿qué significa esto?</a></p>
   </div>
 </footer>

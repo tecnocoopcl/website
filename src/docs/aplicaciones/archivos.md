@@ -1,12 +1,12 @@
 ---
 title: "Archivos"
-description: "Cómo usar Archivos (archivos.aebn.cl): navegar tu Pod, subir y descargar, compartir con otras personas y sincronizar carpetas de tu computador."
+description: "Cómo usar Archivos (archivos.tecnocooperativa.cl): navegar tu Pod, subir y descargar, compartir con otras personas y sincronizar carpetas de tu computador."
 order: 10
 ---
 
 # Archivos
 
-**Archivos** es la aplicación de espacio para ver y ordenar todo lo que hay en tu [Pod](/docs/pods/), como el Finder o el Explorador de archivos, pero con tus datos en la cooperativa. Puedes abrirla en el navegador, en [archivos.aebn.cl](https://archivos.aebn.cl), o dentro de [espacio](/aplicaciones/espacio/), donde viene instalada.
+**Archivos** es la aplicación de espacio para ver y ordenar todo lo que hay en tu [Pod](/docs/glosario/#pod), como el Finder o el Explorador de archivos, pero con tus datos en la cooperativa. Puedes abrirla en el navegador, en [archivos.tecnocooperativa.cl](https://archivos.tecnocooperativa.cl), o dentro de [espacio](/aplicaciones/espacio/), donde viene instalada.
 
 ## Conectar
 

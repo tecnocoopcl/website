@@ -39,4 +39,8 @@ Esta página cubre la app de escritorio espacio y las aplicaciones que vienen co
 
 Vamos corrigiendo estos puntos de a poco, en este orden: primero lo que te puede dejar sin salida, después lo que afecta a todas las aplicaciones a la vez.
 
+## Avísanos de un problema
+
+Si algo de espacio o de este sitio no te funciona con tu lector de pantalla, con el teclado o con otra tecnología de apoyo, escríbenos a [correo@tecnocooperativa.cl](mailto:correo@tecnocooperativa.cl?subject=Accesibilidad). Cuéntanos qué intentabas hacer, en qué aplicación y con qué herramienta.
+
 *Última revisión: 22 de octubre de 2026, sobre el código de espacio. Todavía no hacemos pruebas con usuarios de lectores de pantalla.*

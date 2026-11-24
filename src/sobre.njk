@@ -9,6 +9,12 @@ permalink: /sobre/
     <h1>Sobre la cooperativa</h1>
     <p class="lede">{{ site.name }} ({{ site.legalName }}) es una cooperativa de software y hardware, actualmente {{ site.etapa }}.</p>
 
+    {% if not produccion %}
+    <div class="note">
+      <p><strong>¿Por qué una cooperativa?</strong> Lee <a href="/blog/la-idea-de-la-cooperativa/">«La idea de la cooperativa»</a>, la columna de nuestro socio fundador, y los <a href="/casos-de-uso/">casos de uso</a> de quienes ya la usan.</p>
+    </div>
+    {% endif %}
+
     <h2>Nuestra misión</h2>
     <p>Construir y sostener tecnología —software y hardware— bajo un modelo cooperativo: propiedad colectiva, gestión democrática y beneficios compartidos entre quienes la hacen posible.</p>
 

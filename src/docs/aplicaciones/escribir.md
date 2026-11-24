@@ -6,7 +6,7 @@ order: 30
 
 # Escribir
 
-**Escribir** es el procesador de texto de espacio. Tus documentos se guardan en Markdown, un formato de texto abierto que puedes leer con cualquier programa, en la carpeta `Documentos/` de tu [Pod](/docs/pods/). Viene instalada con espacio.
+**Escribir** es el procesador de texto de espacio. Tus documentos se guardan en Markdown, un formato de texto abierto que puedes leer con cualquier programa, en la carpeta `Documentos/` de tu [Pod](/docs/glosario/#pod). Viene instalada con espacio.
 
 Para usarla necesitas haber [conectado espacio con tu WebID](/docs/comenzando/conectar-espacio/).
 

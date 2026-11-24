@@ -8,9 +8,9 @@ order: 31
 
 Esta es una guía básica para empezar. Se irá ampliando a medida que el servicio crezca.
 
-## 1. Crea tu Pod
+## 1. Entra a tu cuenta
 
-Tu cuenta de la cooperativa llega vacía: el Pod lo creas tú, y con él tu WebID. Los pasos están en [Crea tu Pod y tu WebID](/docs/comenzando/crear-pod/).
+Tu Pod y tu WebID ya vienen creados con tu cuenta, en `https://pods.tecnocooperativa.cl/<tu-nombre>/`. Lo primero es entrar y cambiar la clave inicial: los pasos están en [Entra a tu cuenta](/docs/comenzando/entrar/).
 
 ## 2. Inicia sesión con tu WebID
 

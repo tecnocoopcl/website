@@ -8,18 +8,25 @@ redirecciones:
   - { desde: /aplicaciones/audioteca/, hacia: /plataformas/audioteca/, titulo: Audioteca }
   - { desde: /docs/aplicaciones/musica/, hacia: /docs/plataformas/musica/, titulo: Música }
   - { desde: /docs/aplicaciones/audioteca/, hacia: /docs/plataformas/audioteca/, titulo: Audioteca }
+  - { desde: /pods/, hacia: "/como-funciona/#pods", titulo: Pods }
+  - { desde: /webid/, hacia: "/como-funciona/#webid", titulo: WebID }
+  - { desde: /docs/pods/, hacia: /docs/pods/como-usarlos/, titulo: Pods }
+  - { desde: /docs/pods/webid/, hacia: /docs/webid/, titulo: WebID }
+  - { desde: /docs/comenzando/crear-pod/, hacia: /docs/comenzando/entrar/, titulo: Entra a tu cuenta }
+  - { desde: /docs/comenzando/tu-webid/, hacia: /docs/comenzando/entrar/, titulo: Entra a tu cuenta }
 permalink: "{{ r.desde }}"
 eleventyExcludeFromCollections: true
 layout: null
 tags: []
 ---
-{#- Música y Audioteca pasaron de Aplicaciones a Plataformas: las direcciones
-    anteriores siguen funcionando, como /espacio/. -#}
+{#- Direcciones que se movieron y siguen funcionando, como /espacio/:
+    Música y Audioteca pasaron de Aplicaciones a Plataformas, y /pods/ y
+    /webid/ se juntaron en /como-funciona/. -#}
 <!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>{{ r.titulo }} · {{ site.name }}</title>
+  <title>{{ r.titulo }}, {{ site.name }}</title>
   <link rel="canonical" href="{{ r.hacia }}">
   <meta http-equiv="refresh" content="0; url={{ r.hacia }}">
 </head>

@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+{#- Todas las páginas para los buscadores. Las redirecciones y los borradores
+    ya quedan fuera de collections.all. -#}
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in collections.all %}{% if p.url and p.outputPath and p.outputPath.endsWith(".html") %}
+  <url>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <lastmod>{{ p.date | fechaIso }}</lastmod>
+  </url>
+{%- endif %}{% endfor %}
+</urlset>

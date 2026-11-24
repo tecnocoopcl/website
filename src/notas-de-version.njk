@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: Notas de versión
+description: "Notas de versión de espacio: las novedades de cada versión de la app de escritorio de Tecnocooperativa, de la más nueva a la más antigua."
+permalink: /notas-de-version/
+---
+<section class="page-content">
+  <div class="wrap">
+    <h1>Notas de versión</h1>
+    <p class="lede">Las novedades de cada versión de <a href="/aplicaciones/espacio/">espacio</a>, la app de escritorio de la cooperativa, de la más nueva a la más antigua. La versión estable es la {{ espacio.version }}.</p>
+    <p class="notas__ayuda">¿Buscas el detalle técnico? Está en el <a href="https://github.com/tecnocoopcl/espacio/blob/main/CHANGELOG.md" target="_blank" rel="noopener">CHANGELOG de espacio</a>. Para instalar o actualizar, mira la <a href="/docs/comenzando/instalar-espacio/">guía de instalación</a>.</p>
+
+    {% for serie in notas %}
+    <details class="serie"{% if serie.abierta %} open{% endif %} id="espacio-{{ serie.id }}">
+      <summary><h2>{{ serie.titulo }}</h2></summary>
+      {% if serie.intro %}<p class="serie__intro">{{ serie.intro }}</p>{% endif %}
+      <ol class="notas">
+        {% for v in serie.versiones %}
+        <li class="nota" id="v{{ v.version | replace('.', '-') }}">
+          <h3>espacio {{ v.version }} <time class="nota__fecha" datetime="{{ v.fecha }}">{{ v.fecha | fechaLarga }}</time></h3>
+          {% if v.resumen %}<p class="nota__resumen">{{ v.resumen }}</p>{% endif %}
+          {% if v.cambios.length %}
+          <ul>
+            {% for cambio in v.cambios %}
+            <li>{% if cambio.ojo %}<strong class="nota__ojo">Ojo:</strong> {% endif %}{% if cambio.app %}<strong>{{ cambio.app }}:</strong> {% endif %}{{ cambio.texto }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </details>
+    {% endfor %}
+  </div>
+</section>

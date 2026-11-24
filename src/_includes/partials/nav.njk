@@ -8,9 +8,9 @@
           {% if item.dropdown %}
           <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown-{{ loop.index }}">{{ item.text }}</button>
           <ul class="nav-dropdown-menu" id="nav-dropdown-{{ loop.index }}">
-            {% for sub in item.dropdown %}
+            {% for sub in item.dropdown %}{% if not (sub.pronto and produccion) %}
             <li><a href="{{ sub.url }}"{% if page.url == sub.url %} aria-current="page"{% endif %}>{{ sub.text }}</a></li>
-            {% endfor %}
+            {% endif %}{% endfor %}
           </ul>
           {% else %}
           <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.text }}</a>
@@ -22,6 +22,11 @@
           <a href="{{ site.statusNavItem.url }}"{% if page.url == site.statusNavItem.url %} aria-current="page"{% endif %}>
             {{ site.statusNavItem.text }} <span class="nav-status-dot status-dot--unknown" data-status-dot role="img" aria-label="Estado: cargando…"></span>
           </a>
+        </li>
+        {% endif %}
+        {% if site.ctaNavItem %}
+        <li class="nav-item">
+          <a class="nav-cta" href="{{ site.ctaNavItem.url }}"{% if page.url == site.ctaNavItem.url %} aria-current="page"{% endif %}>{{ site.ctaNavItem.text }}</a>
         </li>
         {% endif %}
       </ul>

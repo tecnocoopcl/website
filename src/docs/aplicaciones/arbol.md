@@ -1,12 +1,12 @@
 ---
 title: "Árbol"
-description: "Cómo usar Árbol en espacio: reunir tus enlaces en una página y publicarla en arbol.aebn.cl."
+description: "Cómo usar Árbol en espacio: reunir tus enlaces en una página y publicarla en arbol.tecnocooperativa.cl."
 order: 15
 ---
 
 # Árbol
 
-**Árbol** junta tus enlaces (tu sitio, tus redes, tu música, lo que quieras mostrar) en una sola página pública, en `arbol.aebn.cl/tu-nombre`. Viene instalada con espacio.
+**Árbol** junta tus enlaces (tu sitio, tus redes, tu música, lo que quieras mostrar) en una sola página pública, en `arbol.tecnocooperativa.cl/tu-nombre`. Viene instalada con espacio.
 
 <div class="note">
   <p><strong>Árbol está en etapa temprana.</strong> Ya puedes usarla, pero todavía le faltan cosas, como elegir colores o subir una foto.</p>
@@ -28,7 +28,7 @@ En cada enlace tienes botones para subirlo (↑), bajarlo (↓), editarlo (✎) 
 
 ## 3. Publica
 
-1. En **Publicar**, elige tu dirección: `arbol.aebn.cl/` seguido de tu nombre, en minúsculas, con números y guiones.
+1. En **Publicar**, elige tu dirección: `arbol.tecnocooperativa.cl/` seguido de tu nombre, en minúsculas, con números y guiones.
 2. Haz clic en **Publicar**.
 
 Cualquiera con la dirección podrá ver tu título, tu descripción y tus enlaces. Necesitas al menos un enlace para publicar.

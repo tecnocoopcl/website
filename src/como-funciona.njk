@@ -1,0 +1,72 @@
+---
+layout: base.njk
+title: Cómo funciona
+description: "Cómo funciona Tecnocooperativa: tus datos viven en tu Pod, entras con tu WebID y las aplicaciones trabajan sobre lo tuyo sin quedárselo."
+permalink: /como-funciona/
+---
+{#- Esta página explica el qué y el porqué de Pods y WebID. El cómo (crear,
+    conectar, compartir) vive en /docs/. Antes eran /pods/ y /webid/. -#}
+<section class="page-content">
+  <div class="wrap">
+    <h1>Cómo funciona</h1>
+    <p class="lede">Tus datos viven en un lugar tuyo, entras con una identidad que es tuya, y las aplicaciones trabajan sobre lo tuyo sin quedárselo.</p>
+
+    <ol class="pasos">
+      <li class="paso">
+        <span class="paso__numero" aria-hidden="true">1</span>
+        <h2>Tu Pod: dónde viven tus datos</h2>
+        <p>Tu espacio personal de almacenamiento en internet.</p>
+      </li>
+      <li class="paso">
+        <span class="paso__numero" aria-hidden="true">2</span>
+        <h2>Tu WebID: quién eres</h2>
+        <p>Una sola identidad para entrar a todo.</p>
+      </li>
+      <li class="paso">
+        <span class="paso__numero" aria-hidden="true">3</span>
+        <h2>Las aplicaciones: qué haces</h2>
+        <p>Herramientas que leen y guardan en tu Pod.</p>
+      </li>
+    </ol>
+
+    <h2 id="pods">Tu Pod</h2>
+    <p>Un Pod es tu propio espacio de almacenamiento personal en internet, basado en el estándar abierto <a href="https://solidproject.org/" target="_blank" rel="noopener">Solid</a>, impulsado por Tim Berners-Lee, el creador de la web.</p>
+    <p>En lugar de que tus datos (documentos, notas, música, contactos) vivan repartidos dentro de las plataformas que los controlan, viven en un lugar que tú controlas. Tú decides qué aplicaciones y qué personas pueden ver cada cosa, y puedes quitar ese acceso cuando quieras.</p>
+
+    <table>
+      <thead>
+        <tr><th></th><th>Nube tradicional</th><th>Pod</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">¿Quién controla el acceso?</th><td>La plataforma</td><td>Tú</td></tr>
+        <tr><th scope="row">¿Los datos están atados a una aplicación?</th><td>Sí</td><td>No: cualquier aplicación compatible puede usarlos</td></tr>
+        <tr><th scope="row">¿Puedes cambiarte sin perder tus datos?</th><td>Generalmente no</td><td>Sí</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="webid">Tu WebID</h2>
+    <p>Un WebID es una dirección web que te identifica. Funciona como un nombre de usuario, pero no pertenece a ninguna plataforma: apunta a tu perfil público, en <code>id.tecnocooperativa.cl</code>. Por ejemplo: <code>https://id.tecnocooperativa.cl/bea#me</code>.</p>
+    <ul>
+      <li><strong>Inicias sesión</strong> en cualquier aplicación compatible con Solid, sin crear una cuenta nueva en cada una.</li>
+      <li><strong>Te identificas ante otras personas</strong>, para que puedan darte acceso a lo que quieran compartir contigo.</li>
+      <li><strong>Publicas tu perfil</strong>: nombre, foto y los datos públicos que tú decidas mostrar.</li>
+    </ul>
+    <p>El Pod es <em>dónde</em> están tus datos; el WebID es <em>quién</em> eres. Cuando compartes una carpeta con alguien, se la compartes a su WebID.</p>
+
+    <h2 id="aplicaciones">Las aplicaciones y las plataformas</h2>
+    <p>Las <a href="/aplicaciones/">aplicaciones</a> son herramientas: escribir, tomar notas, organizar tareas. No guardan nada en sus servidores; leen y escriben en tu Pod. Si dejas de usar una, tus datos siguen ahí.</p>
+    <p>Las <a href="/plataformas/">plataformas</a> son lugares de encuentro: reúnen lo que publican muchos socios, para que cualquiera lo escuche o aprenda sin cuenta. Lo publicado sigue en el Pod de cada quien.</p>
+
+    <h2 id="por-que">¿Por qué una cooperativa?</h2>
+    <p>Hoy tu identidad y tus datos en internet suelen depender de una gran plataforma: si cambia sus reglas o cierra tu cuenta, pierdes todo lo que estaba atado a ella. Un Pod y un WebID alojados en una cooperativa son de quienes los usan, en servidores que conocemos y gobernados entre todos.{% if not produccion %} Lo contamos con más calma en <a href="/blog/la-idea-de-la-cooperativa/">«La idea de la cooperativa»</a>.{% endif %}</p>
+
+    <div class="cta">
+      <h2>¿Quieres probarlo?</h2>
+      <p>Te guiamos paso a paso, desde pedir tu cuenta hasta abrir tu primera aplicación.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/empieza/">Empieza aquí</a>
+        <a class="btn btn-secondary" href="/docs/glosario/">Glosario</a>
+      </div>
+    </div>
+  </div>
+</section>

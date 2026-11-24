@@ -8,8 +8,31 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 ### Agregado
 - Sección **Plataformas** (`/plataformas/`), en la navegación y en la portada, con Música, Audioteca y Academia: son sitios públicos donde los socios publican desde su Pod, no solo aplicaciones. Sus páginas pasan a `/plataformas/musica/` y `/plataformas/audioteca/`, y sus guías a la sección Plataformas de la documentación. Las direcciones anteriores en `/aplicaciones/` y `/docs/aplicaciones/` redirigen a las nuevas.
 - La **Academia** (academia.tecnocooperativa.cl) tiene su página en `/plataformas/academia/`: el catálogo de cursos de los socios, públicos y gratuitos. Todavía sin guía en la documentación.
+- Página **Casos de uso** (`/casos-de-uso/`), todavía sin publicar (marcada `borrador: true`: solo se ve con `npm run dev`), con los testimonios de Alejandro y Raúl, y un adelanto en la portada. Los testimonios viven en `src/_data/testimonios.js`.
+- **Blog** (`/blog/`), todavía sin publicar: sus páginas, el feed y los enlaces desde el menú, el pie y la portada solo se ven con `npm run dev`. Cada entrada es un Markdown en `src/blog/`; las que llevan `borrador: true` se ven con `npm run dev` pero no salen en `npm run build`.
+- Primera entrada: la columna de opinión **«La idea de la cooperativa»** (`/blog/la-idea-de-la-cooperativa/`), firmada por el socio fundador: por qué nace la cooperativa, leída desde Hegel, Benjamin y Foucault.
+- Página **Súmate** (`/sumate/`), con un botón destacado en la navegación: qué significa sumarse hoy, formas de participar, cómo sigue y preguntas frecuentes. El contacto es correo@tecnocooperativa.cl.
+- Página **Cómo funciona** (`/como-funciona/`): Pod, WebID, aplicaciones y plataformas en una sola página, en palabras simples.
+- Página **Empieza aquí** (`/empieza/`): el recorrido completo, desde pedir la cuenta hasta abrir la primera aplicación, con lo que tienes al terminar cada paso.
+- **Glosario** en la documentación (`/docs/glosario/`): Pod, WebID, Solid, espacio, medio, aplicación, plataforma y más.
+- Página **Privacidad** (`/privacidad/`): qué ve y guarda la cooperativa en el sitio, en los Pods y en la API.
+- Feed del blog en `/feed.xml`, `sitemap.xml`, `robots.txt` y etiquetas Open Graph, para que los enlaces compartidos muestren título y resumen.
+- Página **Notas de versión** (`/notas-de-version/`), en el menú Cooperativa y en el pie de página: las novedades de cada versión de espacio, de la 1.3 a la beta 3, que antes se anunciaban por WhatsApp. Viven en `src/_data/notas.js`.
+- Enlace «Saltar al contenido» para quienes navegan con teclado.
+- La página de accesibilidad dice cómo avisarnos de un problema, como prometía.
 
 ### Cambiado
+- Navegación ordenada por lo que viene a hacer quien visita: Cómo funciona, Aplicaciones, Plataformas, Cooperativa (Sobre la cooperativa, Casos de uso, Blog), Documentación, Estado y Súmate. Sale «Inicio»: el nombre lleva a la portada.
+- La **portada** parte por la propuesta en palabras simples y sigue en orden: cómo funciona, espacio, plataformas, casos de uso y cómo sumarse. Sale la tarjeta «Próximamente».
+- El **pie de página** es un mapa del sitio, con el correo de contacto.
+- Los menús de la navegación se abren con clic o teclado, ya no al pasar el mouse.
+- `/pods/` y `/webid/` se juntan en Cómo funciona y redirigen ahí. La documentación ya no repite qué son: «¿Qué es un WebID?» pasa a ser «Tu WebID», con el cómo, y `/docs/pods/` redirige a «Cómo usar tu Pod». Los enlaces a Pod en las guías llevan al glosario.
+- Cada «cuéntanos» o «escríbenos» enlaza a correo@tecnocooperativa.cl. En Súmate, junto al botón hay otro que copia la dirección, porque un enlace de correo no hace nada si el computador no tiene un programa de correo configurado.
+- Todo el sitio usa los dominios de la cooperativa: los Pods en `pods.tecnocooperativa.cl`, los WebID en `id.tecnocooperativa.cl/<nombre>#me` (ADR-012 de medio) y Archivos, Notas, Por Hacer, Archivador, Árbol y Encuestador en `<app>.tecnocooperativa.cl`, en vez de `*.aebn.cl`.
+- La guía «Crea tu Pod y tu WebID» pasa a ser **«Entra a tu cuenta»** (`/docs/comenzando/entrar/`): la cooperativa ya crea la cuenta, el Pod y el WebID juntos, y el socio solo entra con la clave inicial y la cambia. Para recuperar la contraseña se escribe al correo, porque el servidor todavía no manda correos. La dirección anterior redirige a la nueva, igual que `/docs/comenzando/tu-webid/`.
+- «Tu WebID» explica que el perfil vive en `id.tecnocooperativa.cl`, aparte del Pod, para que el WebID no cambie aunque el Pod se mueva.
+- La página **Estado** lee lo que ahora entrega la API: las máquinas, sin modelo ni nombre interno, solo para qué sirve cada una y si está operativa (Operativa, Durmiendo si se enciende solo cuando se necesita, o No responde), cuántos servicios corren y cuántos fallan, y el aviso general sale del campo `healthy` de la API, con el motivo concreto («Una máquina no responde»). Mientras carga dice «Comprobando el estado…» en vez de mostrar un verde viejo.
+- La página **Estado** suma la sección Plataformas: Música, Audioteca y Academia se comprueban en vivo desde el navegador. Si alguna no responde, el aviso general pasa a amarillo y dice cuántas. Los datos de respaldo, para cuando la API no contesta, quedan al 23 de noviembre.
 - La página **Estado** lee la API de la cooperativa en `api.tecnocooperativa.cl` (antes `status-tc.aebn.cl`).
 - La Audioteca se escucha en audioteca.tecnocooperativa.cl: la tarjeta, su página y su guía enlazaban todavía a audioteca.aebn.cl, que ya no existe.
 - Música se escucha en musica.tecnocooperativa.cl: el catálogo de aplicaciones, la página de Música y la documentación de Música y Estudio enlazan al dominio nuevo en vez de musica.aebn.cl.

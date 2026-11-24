@@ -1,17 +1,18 @@
 ---
 layout: base.njk
 title: Estado
-description: "Estado de la infraestructura de Tecnocooperativa: salud general, almacenamiento y servicios."
+description: "Estado de la infraestructura de Tecnocooperativa: salud general, almacenamiento, servicios y plataformas."
 permalink: /estado/
 ---
 {% set freeGb = status.storage.freeGb %}
 {% set usedPct = (status.storage.usedGb / status.storage.totalGb * 100) | round(1) %}
 {% set badgeLabels = { ok: "Operativo", degraded: "Degradado", down: "Caído", disabled: "No disponible" } %}
+{% set estadoNodo = { ok: "Operativa", sleeping: "Durmiendo", down: "No responde" } %}
 <section class="page-content" data-estado-page>
   <div class="wrap">
-    <div class="status-banner status-banner--{{ status.overall.state }}" data-field="overall-banner">
+    <div class="status-banner status-banner--unknown" data-field="overall-banner">
       <span class="status-dot"></span>
-      <span data-field="overall-label">{{ status.overall.label }}</span>
+      <span data-field="overall-label">Comprobando el estado…</span>
     </div>
 
     <h1 class="section-title">General</h1>
@@ -61,6 +62,22 @@ permalink: /estado/
       </div>
     </div>
 
+    <h1 class="section-title">Máquinas</h1>
+    <p>Las máquinas donde corre la cooperativa y para qué sirve cada una. Una que se enciende solo cuando se necesita aparece como <em>Durmiendo</em> cuando está apagada: no es una falla.</p>
+    <div class="status-list" data-field="nodes" data-node-names="{{ status.nodeNames | dump }}">
+      {% for n in status.nodes %}
+      {% set estado = 'ok' if n.up else ('sleeping' if n.onDemand else 'down') %}
+      {% set info = status.nodeNames[n.id] %}
+      <div class="status-card status-card--{{ estado }}">
+        <div class="status-card__header">
+          <h3>{{ info.nombre if info else n.id }}</h3>
+          <span class="status-badge status-badge--{{ 'disabled' if estado == 'sleeping' else estado }}">{{ estadoNodo[estado] }}</span>
+        </div>
+        <p>{{ info.detalle if info else "" }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
     <h1 class="section-title">Servicios</h1>
     <div class="status-list">
       <div class="status-card">
@@ -77,23 +94,46 @@ permalink: /estado/
         </div>
       </div>
 
-      {% for service in status.services %}
-      <div class="status-card{% if service.state == 'disabled' %} status-card--disabled{% endif %}">
+      <div class="status-card">
         <div class="status-card__header">
-          <h3>{{ service.name }}</h3>
-          <span class="status-badge status-badge--{{ service.state }}">{{ badgeLabels[service.state] }}</span>
+          <h3>Servicios de la cooperativa</h3>
+          <span class="status-badge status-badge--disabled" data-field="services-badge">Comprobando…</span>
         </div>
-        <p>{{ service.description }}</p>
-        {% if service.stats and service.stats.length %}
+        <p>Lo que corre en las máquinas: la API, los Pods, las identidades y los sitios.</p>
         <div class="service-stats">
-          {% for stat in service.stats %}
           <div>
-            <strong>{{ stat.value }}</strong>
-            <span>{{ stat.label }}</span>
+            <strong data-field="services-running">{{ status.services.running }} de {{ status.services.enabled }}</strong>
+            <span>corriendo</span>
           </div>
-          {% endfor %}
+          <div>
+            <strong data-field="services-failing">{{ status.services.failing }}</strong>
+            <span>con fallas</span>
+          </div>
         </div>
-        {% endif %}
+      </div>
+
+      {% for p in status.pendientes %}
+      <div class="status-card status-card--disabled">
+        <div class="status-card__header">
+          <h3>{{ p.name }}</h3>
+          <span class="status-badge status-badge--disabled">{{ badgeLabels.disabled }}</span>
+        </div>
+        <p>{{ p.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h1 class="section-title">Plataformas</h1>
+    <p>Los sitios públicos donde los socios publican su trabajo. Se comprueban en vivo desde tu navegador.</p>
+    <div class="status-list">
+      {% for app in aplicaciones.plataformas %}
+      <div class="status-card" data-plataforma="{{ app.url }}">
+        <div class="status-card__header">
+          <h3><a href="{{ app.pagina }}">{{ app.name }}</a></h3>
+          <span class="status-badge status-badge--disabled" data-plataforma-badge>Comprobando…</span>
+        </div>
+        <p>{{ app.description }}</p>
+        <p class="status-source-note"><a href="{{ app.url }}" target="_blank" rel="noopener">{{ app.url | replace("https://", "") }}</a></p>
       </div>
       {% endfor %}
     </div>

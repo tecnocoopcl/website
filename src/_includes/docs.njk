@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 {% include "partials/head.njk" %}
-  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }} Docs</title>
+  <title>{% if title %}{{ title }}, {% endif %}{{ site.name }} Docs</title>
 </head>
 <body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
   {% include "partials/nav.njk" %}
   <div class="docs-layout">
     <input type="checkbox" id="docs-nav-toggle" class="docs-nav-toggle-input">
@@ -21,7 +22,7 @@
       </div>
       {% endfor %}
     </aside>
-    <main class="docs-content">
+    <main class="docs-content" id="contenido" tabindex="-1">
       <div class="docs-content__inner">
         {{ content | safe }}
       </div>

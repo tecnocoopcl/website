@@ -1,17 +1,43 @@
 ---
 layout: base.njk
 title: Inicio
-description: "Tecnocooperativa es una cooperativa digital de software y hardware en etapa de organización inicial. Conoce WebID y Pods, y descarga espacio."
+description: "Tecnocooperativa: tus datos en un lugar tuyo, una identidad que es tuya y aplicaciones que no se quedan con lo tuyo. Una cooperativa digital en etapa de organización inicial."
 ---
+{#- Orden: qué es (en palabras simples), cómo funciona, qué puedes usar,
+    quiénes lo usan, y cómo sumarte. -#}
 <section class="hero">
   <div class="wrap">
-    <h1>{{ site.name }}</h1>
-    <p>{{ site.tagline }}. Una cooperativa digital que construye tecnología con y para sus socias y socios.</p>
+    <p class="hero__marca">{{ site.name }}, {{ site.tagline | lower }}</p>
+    <h1>Tus datos, en un lugar tuyo</h1>
+    <p>Una cooperativa digital que te da un espacio propio en internet, una identidad que es tuya y aplicaciones que trabajan sobre lo tuyo sin quedárselo.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="/webid/">Conoce WebID</a>
-      <a class="btn btn-secondary" href="/pods/">Conoce Pods</a>
+      <a class="btn btn-primary" href="/empieza/">Empieza aquí</a>
+      <a class="btn btn-secondary" href="/como-funciona/">Cómo funciona</a>
     </div>
-    <p class="hero__docs"><a href="/docs/comenzando/crear-pod/">Lee la documentación</a></p>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <h2>Cómo funciona</h2>
+    <ol class="pasos">
+      <li class="paso">
+        <span class="paso__numero" aria-hidden="true">1</span>
+        <h3>Tu Pod</h3>
+        <p>Tu espacio personal en internet. Ahí viven tus documentos, notas y música, y tú decides quién los ve.</p>
+      </li>
+      <li class="paso">
+        <span class="paso__numero" aria-hidden="true">2</span>
+        <h3>Tu WebID</h3>
+        <p>Una sola identidad para entrar a todas las aplicaciones, sin crear una cuenta en cada una.</p>
+      </li>
+      <li class="paso">
+        <span class="paso__numero" aria-hidden="true">3</span>
+        <h3>Tus aplicaciones</h3>
+        <p>Herramientas que leen y guardan en tu Pod. Si dejas de usar una, tus datos siguen ahí.</p>
+      </li>
+    </ol>
+    <p><a href="/como-funciona/">Entiende cómo funciona →</a></p>
   </div>
 </section>
 
@@ -20,12 +46,12 @@ description: "Tecnocooperativa es una cooperativa digital de software y hardware
     <div class="cta">
       <div class="app-titulo">
         <img class="app-icono app-icono--espacio" src="/static/iconos/espacio-180.png" alt="" width="64" height="64">
-        <h2>Descarga espacio</h2>
+        <h2>espacio, la app de escritorio</h2>
       </div>
-      <p>La app de Tecnocooperativa para compartir archivos y carpetas desde tu Pod. Versión {{ espacio.version }}.</p>
+      <p>Entras con tu WebID, se conecta a tu Pod y desde ahí abres todas las aplicaciones de la cooperativa: archivos, documentos, notas, calendario y más. Para Mac, Windows y Ubuntu. Versión {{ espacio.version }}.</p>
       <div class="btn-row">
         {% include "partials/descarga.njk" %}
-        <a class="btn btn-secondary" href="/aplicaciones/espacio/">Conoce espacio</a>
+        <a class="btn btn-secondary" href="/aplicaciones/">Ver las aplicaciones</a>
       </div>
       <p class="split-btn__hint"><a href="/docs/comenzando/instalar-espacio/">Guía de instalación</a></p>
     </div>
@@ -34,8 +60,8 @@ description: "Tecnocooperativa es una cooperativa digital de software y hardware
 
 <section id="plataformas">
   <div class="wrap">
-    <h2>Nuestras plataformas</h2>
-    <p>Sitios públicos donde los socios publican su trabajo y cualquiera puede escucharlo o aprender de él, sin cuenta.</p>
+    <h2>Escucha y aprende, sin cuenta</h2>
+    <p>Nuestras plataformas reúnen lo que publican los socios. Cualquiera puede entrar; lo publicado sigue en el Pod de quien lo hizo.</p>
     <div class="cards">
       {% for app in aplicaciones.plataformas %}{% include "partials/app-card.njk" %}{% endfor %}
     </div>
@@ -43,34 +69,37 @@ description: "Tecnocooperativa es una cooperativa digital de software y hardware
   </div>
 </section>
 
-<section id="servicios">
+{% if not produccion %}
+<section id="casos-de-uso">
   <div class="wrap">
-    <h2>Nuestros servicios</h2>
-    <p>Estamos partiendo con nuestros primeros servicios, y sumaremos más a medida que la cooperativa crezca.</p>
-    <div class="cards">
-      <div class="card card--featured">
-        <h3>WebID</h3>
-        <p>Tu identidad abierta en la web. Inicia sesión en aplicaciones Solid sin crear una cuenta nueva en cada una y sin depender de ninguna plataforma.</p>
-        <p><a href="/webid/">Ver más sobre WebID →</a></p>
-      </div>
-      <div class="card">
-        <h3>Pods (Solid)</h3>
-        <p>Tu propio espacio de datos personales, bajo el estándar Solid. Guarda y controla tu información, y decide quién accede a ella.</p>
-        <p><a href="/pods/">Ver más sobre Pods →</a></p>
-      </div>
-      <div class="card">
-        <h3>Próximamente</h3>
-        <p>Estamos evaluando nuevos servicios de software y hardware cooperativo. ¿Tienes una idea o necesidad? Cuéntanosla.</p>
-      </div>
+    <h2>Casos de uso</h2>
+    <p>Lo que hace la cooperativa, contado por sus socios.</p>
+    <div class="testimonios">
+      {% for t in testimonios %}
+      <article class="testimonio">
+        <h3>{{ t.titulo }}</h3>
+        <blockquote><p>{{ t.cita }}</p></blockquote>
+        <p class="testimonio__firma"><strong>{{ t.nombre }}</strong>, {{ t.rol }}</p>
+      </article>
+      {% endfor %}
     </div>
+    <p><a href="/casos-de-uso/">Lee los casos completos →</a></p>
   </div>
 </section>
+{% endif %}
 
-<section id="sobre">
+<section id="sumate">
   <div class="wrap">
-    <h2>Sobre la cooperativa</h2>
-    <p>{{ site.name }} ({{ site.legalName }}) es un proyecto {{ site.etapa }} que busca ofrecer alternativas de software y hardware cooperativas, éticas y centradas en las personas.</p>
-    <p><a href="/sobre/">Conoce más sobre nosotros</a> · <a href="/sobre/#estado">¿Qué significa esta etapa?</a></p>
+    <div class="cta">
+      <h2>Una cooperativa en formación</h2>
+      <p>{{ site.name }} ({{ site.legalName }}) está {{ site.etapa }}: estamos reuniendo a las personas que la van a fundar. Si quieres construir espacio público digital con otros, súmate.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/sumate/">Súmate</a>
+        {% if not produccion %}<a class="btn btn-secondary" href="/blog/la-idea-de-la-cooperativa/">Por qué una cooperativa</a>
+        {% else %}<a class="btn btn-secondary" href="/sobre/">Sobre la cooperativa</a>{% endif %}
+      </div>
+      <p class="split-btn__hint"><a href="/sobre/">Sobre la cooperativa</a>, <a href="/sobre/#estado">¿qué significa esta etapa?</a></p>
+    </div>
   </div>
 </section>
 

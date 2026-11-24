@@ -3,7 +3,7 @@
 
   var METRICS_URL = "https://api.tecnocooperativa.cl/";
   var HEALTHZ_URL = "https://api.tecnocooperativa.cl/healthz";
-  var CACHE_KEY = "tecnocoop:estado-cache:v1";
+  var CACHE_KEY = "tecnocoop:estado-cache:v2";
 
   function readCache() {
     try {
@@ -35,20 +35,23 @@
     return new Intl.DateTimeFormat("es-CL", { dateStyle: "long", timeZone: "UTC" }).format(date);
   }
 
+  // La API informa en una sola respuesta si todo está sano (`healthy`), qué
+  // máquinas (`nodes`) y cuántos servicios (`services`) hay.
   async function fetchLive() {
     var metricsRes = await fetch(METRICS_URL, { cache: "no-store" });
     if (!metricsRes.ok) throw new Error("metrics endpoint returned " + metricsRes.status);
     var metrics = await metricsRes.json();
 
-    var healthy = false;
-    try {
-      var healthRes = await fetch(HEALTHZ_URL, { cache: "no-store" });
-      if (healthRes.ok) {
-        var text = (await healthRes.text()).trim().toLowerCase();
-        healthy = text === "ok";
-      }
-    } catch (err) {
+    var healthy = metrics.healthy;
+    if (typeof healthy !== "boolean") {
+      // Una API más vieja no trae `healthy`: se pregunta a /healthz.
       healthy = false;
+      try {
+        var healthRes = await fetch(HEALTHZ_URL, { cache: "no-store" });
+        if (healthRes.ok) healthy = (await healthRes.text()).trim().toLowerCase() === "ok";
+      } catch (err) {
+        healthy = false;
+      }
     }
 
     return { metrics: metrics, healthy: healthy, fetchedAt: Date.now() };
@@ -71,6 +74,70 @@
     });
   }
 
+  function plural(n, uno, varios) {
+    return n + " " + (n === 1 ? uno : varios);
+  }
+
+  // Qué decir cuando algo anda mal: lo concreto, no solo «hay problemas».
+  function problemLabel(metrics) {
+    var caidas = (metrics.nodes || []).filter(function (n) { return !n.up && !n.on_demand; }).length;
+    var fallas = metrics.services ? metrics.services.failing : 0;
+    var partes = [];
+    if (caidas) partes.push(caidas === 1 ? "Una máquina no responde" : caidas + " máquinas no responden");
+    if (fallas) partes.push(plural(fallas, "servicio con fallas", "servicios con fallas"));
+    return partes.length ? partes.join(" y ") : "Hay problemas con la infraestructura";
+  }
+
+  // Cada máquina: operativa, durmiendo (se enciende cuando se necesita) o sin respuesta.
+  function renderNodes(nodes) {
+    var lista = document.querySelector('[data-field="nodes"]');
+    if (!lista || !Array.isArray(nodes)) return;
+    var nombres = {};
+    try {
+      nombres = JSON.parse(lista.getAttribute("data-node-names") || "{}");
+    } catch (err) {
+      nombres = {};
+    }
+    var textos = { ok: "Operativa", sleeping: "Durmiendo", down: "No responde" };
+    lista.textContent = "";
+    nodes.forEach(function (n) {
+      var estado = n.up ? "ok" : n.on_demand ? "sleeping" : "down";
+      var info = nombres[n.id] || {};
+
+      var card = document.createElement("div");
+      card.className = "status-card status-card--" + estado;
+
+      var header = document.createElement("div");
+      header.className = "status-card__header";
+      var h3 = document.createElement("h3");
+      h3.textContent = info.nombre || "Máquina";
+      var badge = document.createElement("span");
+      badge.className = "status-badge status-badge--" + (estado === "sleeping" ? "disabled" : estado);
+      badge.textContent = textos[estado];
+      header.appendChild(h3);
+      header.appendChild(badge);
+      card.appendChild(header);
+
+      var p = document.createElement("p");
+      p.textContent = info.detalle || "";
+      card.appendChild(p);
+      lista.appendChild(card);
+    });
+  }
+
+  function renderServices(services) {
+    if (!services) return;
+    setField("services-running", services.running + " de " + services.enabled);
+    setField("services-failing", String(services.failing));
+    var badge = document.querySelector('[data-field="services-badge"]');
+    if (!badge) return;
+    var estado = services.failing > 0 ? "down" : services.running < services.enabled ? "degraded" : "ok";
+    var texto = { ok: "Operativos", degraded: "Degradados", down: "Con fallas" };
+    badge.classList.remove("status-badge--disabled", "status-badge--ok", "status-badge--degraded", "status-badge--down");
+    badge.classList.add("status-badge--" + estado);
+    badge.textContent = texto[estado];
+  }
+
   function applyToPage(snapshot, fromCache) {
     var metrics = snapshot.metrics;
     var healthy = snapshot.healthy;
@@ -88,15 +155,14 @@
     var usedPct = totalGb > 0 ? Math.round((usedGb / totalGb) * 1000) / 10 : 0;
 
     setField("date", formatLongDate(metrics.date));
-    setField(
-      "overall-label",
-      healthy ? "Todos los sistemas operativos" : "Hay problemas con la infraestructura"
-    );
+    setField("overall-label", healthy ? "Todos los sistemas operativos" : problemLabel(metrics));
     var banner = document.querySelector('[data-field="overall-banner"]');
     if (banner) {
-      banner.classList.remove("status-banner--ok", "status-banner--down");
+      banner.classList.remove("status-banner--ok", "status-banner--down", "status-banner--degraded", "status-banner--unknown");
       banner.classList.add(healthy ? "status-banner--ok" : "status-banner--down");
     }
+    renderNodes(metrics.nodes);
+    renderServices(metrics.services);
 
     setField("storage-used", usedGb + " GB");
     setField("storage-free", freeGb + " GB");
@@ -127,7 +193,7 @@
     setNavStatus("unknown", "Estado: no se pudo contactar api.tecnocooperativa.cl");
     var banner = document.querySelector('[data-field="overall-banner"]');
     if (banner) {
-      banner.classList.remove("status-banner--ok", "status-banner--down");
+      banner.classList.remove("status-banner--ok", "status-banner--down", "status-banner--unknown");
       banner.classList.add("status-banner--degraded");
     }
     setField("overall-label", "No se pudo obtener el estado en vivo");
@@ -138,7 +204,64 @@
     }
   }
 
+  // Cada plataforma (Música, Audioteca, Academia) se comprueba pidiendo su
+  // portada: no tienen /healthz, pero responden con CORS abierto.
+  var PLATFORM_TIMEOUT_MS = 8000;
+
+  async function checkPlatform(url) {
+    var controller = typeof AbortController === "function" ? new AbortController() : null;
+    var timer = controller ? setTimeout(function () { controller.abort(); }, PLATFORM_TIMEOUT_MS) : null;
+    try {
+      var res = await fetch(url, {
+        cache: "no-store",
+        signal: controller ? controller.signal : undefined,
+      });
+      return res.ok;
+    } catch (err) {
+      return false;
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
+  }
+
+  async function checkPlatforms() {
+    var cards = Array.prototype.slice.call(document.querySelectorAll("[data-plataforma]"));
+    if (!cards.length) return;
+
+    var results = await Promise.all(
+      cards.map(function (card) {
+        return checkPlatform(card.getAttribute("data-plataforma")).then(function (up) {
+          var badge = card.querySelector("[data-plataforma-badge]");
+          if (badge) {
+            badge.classList.remove("status-badge--disabled", "status-badge--ok", "status-badge--down");
+            badge.classList.add(up ? "status-badge--ok" : "status-badge--down");
+            badge.textContent = up ? "Operativo" : "No responde";
+          }
+          return up;
+        });
+      })
+    );
+
+    return results.filter(function (up) { return !up; }).length;
+  }
+
+  // Si la infraestructura está bien pero alguna plataforma no responde, el
+  // aviso general lo dice en vez de quedar en verde. Se llama después de
+  // aplicar la API, que es la que pone el aviso en verde o rojo.
+  function applyPlatformsToBanner(down) {
+    var banner = document.querySelector('[data-field="overall-banner"]');
+    if (down && banner && banner.classList.contains("status-banner--ok")) {
+      banner.classList.remove("status-banner--ok");
+      banner.classList.add("status-banner--degraded");
+      setField(
+        "overall-label",
+        down === 1 ? "Una plataforma no responde" : down + " plataformas no responden"
+      );
+    }
+  }
+
   async function init() {
+    var platforms = document.querySelector("[data-estado-page]") ? checkPlatforms() : null;
     var cached = readCache();
     if (cached) {
       applyToPage(cached, true);
@@ -154,6 +277,10 @@
       if (!cached) {
         markUnreachable();
       }
+    }
+
+    if (platforms) {
+      applyPlatformsToBanner(await platforms);
     }
   }
 

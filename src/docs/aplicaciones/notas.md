@@ -1,12 +1,12 @@
 ---
 title: "Notas"
-description: "Cómo usar Notas (notas.aebn.cl): notas en Markdown enlazadas con [[corchetes dobles]], con grafo de enlaces, guardadas en tu Pod."
+description: "Cómo usar Notas (notas.tecnocooperativa.cl): notas en Markdown enlazadas con [[corchetes dobles]], con grafo de enlaces, guardadas en tu Pod."
 order: 50
 ---
 
 # Notas
 
-**Notas** es para tomar notas en Markdown y enlazarlas entre sí, al estilo de Obsidian. Se guardan en la carpeta `Documentos/` de tu [Pod](/docs/pods/). Puedes abrirla en el navegador, en [notas.aebn.cl](https://notas.aebn.cl), o dentro de [espacio](/aplicaciones/espacio/), desde el catálogo de aplicaciones.
+**Notas** es para tomar notas en Markdown y enlazarlas entre sí, al estilo de Obsidian. Se guardan en la carpeta `Documentos/` de tu [Pod](/docs/glosario/#pod). Puedes abrirla en el navegador, en [notas.tecnocooperativa.cl](https://notas.tecnocooperativa.cl), o dentro de [espacio](/aplicaciones/espacio/), desde el catálogo de aplicaciones.
 
 ## Conectar
 

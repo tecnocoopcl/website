@@ -6,9 +6,9 @@ order: 2
 
 # Instalar espacio
 
-<p class="lede">Paso 2 de 3 para empezar: crea tu Pod y tu WebID, instala espacio y conéctalos.</p>
+<p class="lede">Paso 2 de 3 para empezar: entra a tu cuenta, instala espacio y conéctalos.</p>
 
-**espacio** es la app de escritorio de la cooperativa: te permite trabajar con los archivos y carpetas de tu [Pod](/docs/pods/) y compartirlos. Si todavía no creas tu Pod, empieza por el [paso 1](/docs/comenzando/crear-pod/). La versión actual es la **{{ espacio.version }}**.
+**espacio** es la app de escritorio de la cooperativa: te permite trabajar con los archivos y carpetas de tu [Pod](/docs/glosario/#pod) y compartirlos. Si todavía no entras a tu cuenta, empieza por el [paso 1](/docs/comenzando/entrar/). La versión actual es la **{{ espacio.version }}**.
 
 ## Mac
 
