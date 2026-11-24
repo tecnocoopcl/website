@@ -11,8 +11,8 @@
     {{ content | safe }}
   </main>
   {% include "partials/footer.njk" %}
-  <script src="/js/nav.js" defer></script>
-  <script src="/js/status.js" defer></script>
-  <script src="/js/copiar.js" defer></script>
+  <script src="/js/nav.js?v={{ pkg.version }}" defer></script>
+  <script src="/js/status.js?v={{ pkg.version }}" defer></script>
+  <script src="/js/copiar.js?v={{ pkg.version }}" defer></script>
 </body>
 </html>
