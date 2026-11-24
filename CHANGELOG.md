@@ -3,10 +3,17 @@
 Todos los cambios notables de este proyecto se documentan aquí.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
-## [Sin publicar]
+## [1.18.0] - 2026-11-24
+
+### Cambiado
+- El lema «Construyendo espacio público digital» dice lo mismo en todo el sitio: en el pie de página va bajo el nombre, y en Sobre la cooperativa, la portada y la línea legal del pie reemplaza al nombre legal («Cooperativa para el Espacio Público Digital»), que ya no se muestra.
+- Las **Notas de versión** muestran las series colapsadas, con los títulos «espacio, versión 3», «espacio, versión 2» y «espacio, versión 1».
+- Las entradas del blog ya no llevan categoría. La firma muestra el nombre del autor y enlaza a su ficha en Socios.
 
 ### Agregado
-- Las **Notas de versión** abren con un resumen de lo trabajado hasta el 24 de noviembre (medio, correo de entrada, pruebas con IA y los pasos antes de espacio 3 estable), y suman espacio 3.0.0-beta.5 a beta.10, 2.9.1, 2.9.2 y 2.10. Una serie puede llevar ese resumen en el campo `anuncio` de `src/_data/notas.js`.
+- Se publica el **Blog** (`/blog/`) y su feed (`/feed.xml`), en el menú Cooperativa y en el pie. Lo inaugura un reporte semanal, **«En qué estamos, semana 48»**, que cuenta medio, el correo de entrada, las pruebas con IA y los pasos antes de espacio 3 estable. Las demás entradas siguen en borrador (`borrador: true`), y ahora cada una lo marca en su propio archivo.
+- Página **Socios** (`/socios/`), en el menú Cooperativa y en el pie, con una ficha para cada socio en `/socios/<slug>/` que lista lo que escribió en el blog y enlaza a su sitio personal. Los socios viven en `src/_data/socios.js`, y las entradas los nombran con `autor: <slug>`.
+- Las **Notas de versión** suman espacio 3.0.0-beta.5 a beta.10, 2.9.1, 2.9.2 y 2.10.
 
 ## [1.17.0] - 2026-11-24
 

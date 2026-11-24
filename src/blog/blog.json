@@ -1,0 +1,7 @@
+{
+  "layout": "entrada.njk",
+  "tags": [
+    "blog"
+  ],
+  "permalink": "/blog/{{ page.fileSlug }}/"
+}

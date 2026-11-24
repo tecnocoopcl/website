@@ -1,0 +1,39 @@
+---
+layout: base.njk
+pagination:
+  data: socios
+  size: 1
+  alias: socio
+permalink: "/socios/{{ socio.slug }}/"
+eleventyImport:
+  collections: ["publicadas"]
+eleventyComputed:
+  title: "{{ socio.nombre }}"
+  description: "{{ socio.nombre }}, {{ socio.rol | lower }} de Tecnocooperativa."
+---
+{#- La ficha de cada socio, desde src/_data/socios.js. -#}
+<section class="page-content">
+  <div class="wrap columna">
+    <p class="columna__volver"><a href="/socios/">← Socios</a></p>
+    <h1>{{ socio.nombre }}</h1>
+    <p class="lede">{{ socio.rol }}</p>
+
+    {% for p in socio.bio %}<p>{{ p }}</p>{% endfor %}
+    {% if socio.sitio %}<p class="socio__sitio">Su sitio personal: <a href="{{ socio.sitio }}" rel="me noopener" target="_blank">{{ socio.sitio | replace("https://", "") }}</a></p>{% endif %}
+
+    {% set escritos = [] %}
+    {% for entrada in collections.publicadas | reverse %}{% if entrada.data.autor == socio.slug %}{% set escritos = (escritos.push(entrada), escritos) %}{% endif %}{% endfor %}
+    {% if escritos.length %}
+    <h2>En el blog</h2>
+    <ol class="entradas">
+      {% for entrada in escritos %}
+      <li class="entrada">
+        <p class="entrada__meta"><time datetime="{{ entrada.date | fechaIso }}">{{ entrada.date | fechaLarga }}</time></p>
+        <h3><a href="{{ entrada.url }}">{{ entrada.data.title }}</a></h3>
+        {% if entrada.data.resumen %}<p>{{ entrada.data.resumen }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+  </div>
+</section>

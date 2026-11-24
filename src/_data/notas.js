@@ -7,56 +7,17 @@
 //
 // Las fechas salen del CHANGELOG de espacio y de las publicaciones del feed.
 //
-// Una serie puede llevar un `anuncio`: un resumen con fecha que se muestra
-// arriba de sus versiones, para contar lo grande y lo que viene. Tiene
-// `titulo`, `fecha`, `parrafos`, `puntos` (cada uno `{ titulo, texto }`) y `cierre`.
+// Los reportes de en qué está la cooperativa no van aquí: son entradas del
+// blog con `categoria: Reporte`.
 const c = (app, texto, ojo = false) => ({ app, texto, ojo });
 
 module.exports = [
   {
     id: "3",
-    titulo: "espacio 3 (beta)",
-    abierta: true,
+    titulo: "espacio, versión 3",
+    abierta: false,
     intro:
       "Estamos trabajando en la versión 3 de espacio. Para llegar a una versión estable, publicamos betas que puedes probar. Si prefieres no arriesgar, la versión estable sigue siendo la 2.",
-    anuncio: {
-      titulo: "En qué estamos",
-      fecha: "2026-11-24",
-      parrafos: [
-        "Desde el último anuncio, la cooperativa no ha parado. Ahora las novedades se cuentan aquí, en las Notas de versión del sitio, y no solo por WhatsApp. Así queda todo en un lugar, ordenado y fácil de revisar.",
-      ],
-      puntos: [
-        {
-          titulo: "Las notas de versión, en el sitio.",
-          texto: "Cada versión de espacio tiene sus novedades en esta página, desde la 1.3 hasta la beta más reciente. El sitio también se reorganizó: suma las páginas Cómo funciona, Empieza aquí, Súmate, Privacidad y un glosario, y la sección Plataformas, con Música, Audioteca y Academia.",
-        },
-        {
-          titulo: "Nuestra nube propia: medio.",
-          texto: "Estamos construyendo medio, la plataforma donde corren los servicios de la cooperativa en nuestras propias máquinas, sin depender de nubes de terceros. Se administra desde una consola (consola.tecnocooperativa.cl) que muestra cada servicio con sus pedidos, sus registros y su consumo, y desde ahí se dan de alta socios y organizaciones. El sitio y la API de la cooperativa ya corren en medio, y la página Estado muestra las máquinas en vivo.",
-        },
-        {
-          titulo: "Correo de entrada.",
-          texto: "La cooperativa ya recibe correo en sus direcciones, como correo@tecnocooperativa.cl. Lo que llega puede quedar en tu Pod, y la cooperativa no puede leer ni borrar lo que ya tienes. La app Correo de espacio, para leerlo, llega en la próxima beta.",
-        },
-        {
-          titulo: "Pruebas con IA.",
-          texto: "Probamos un modelo de lenguaje que corre en el PC de la cooperativa, no en la nube de otra empresa. La beta.9 trae la app IA, que tiene un chat y tareas listas: resumir, reescribir más claro, lluvia de ideas y traducir al inglés. Las conversaciones no se guardan. Por ahora es un experimento, para conocer qué se puede hacer con nuestro propio equipo.",
-        },
-        {
-          titulo: "Presentaciones.",
-          texto: "La beta.9 también trae una app nueva para armar diapositivas y presentar con notas, siguiente diapositiva y cronómetro en una segunda pantalla.",
-        },
-        {
-          titulo: "Dominio definitivo.",
-          texto: "Todo pasa a tecnocooperativa.cl: el sitio, la API, los Pods, los WebID, Música y Audioteca.",
-        },
-      ],
-      cierre: [
-        "Con esto cerramos la versión 3. No entran funciones nuevas: desde ahora el trabajo es dejar lo que hay firme y seguro.",
-        "Antes de que la beta pase a estable, haremos dos cosas: alinear espacio y los servicios de la cooperativa con la Ley de Protección de Datos Personales de Chile (Ley 21.719), y hacer una revisión de ciberseguridad. Recién después de eso publicaremos espacio 3.0.0 estable.",
-        "Si quieres seguir probando, activa «Recibir versiones beta» en Configuración › Actualizaciones. Si prefieres no arriesgar, la versión estable sigue siendo la 2.10.",
-      ],
-    },
     versiones: [
       {
         version: "3.0.0-beta.10",
@@ -146,7 +107,7 @@ module.exports = [
   },
   {
     id: "2",
-    titulo: "espacio 2",
+    titulo: "espacio, versión 2",
     abierta: false,
     versiones: [
       {
@@ -251,7 +212,7 @@ module.exports = [
   },
   {
     id: "1",
-    titulo: "espacio 1",
+    titulo: "espacio, versión 1",
     abierta: false,
     versiones: [
       {

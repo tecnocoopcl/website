@@ -1,5 +1,7 @@
 module.exports = {
   name: "Tecnocooperativa",
+  // Nombre legal: para trámites y documentos, no se muestra en el sitio. Lo que
+  // se ve es el lema de abajo, que debe decir lo mismo en todas partes.
   legalName: "Cooperativa para el Espacio Público Digital",
   // Etapa previa a la constitución legal; se explica en /sobre/#estado.
   etapa: "en etapa de organización inicial",
@@ -19,7 +21,8 @@ module.exports = {
       dropdown: [
         { text: "Sobre la cooperativa", url: "/sobre/" },
         { text: "Casos de uso", url: "/casos-de-uso/", pronto: true },
-        { text: "Blog", url: "/blog/", pronto: true },
+        { text: "Socios", url: "/socios/" },
+        { text: "Blog", url: "/blog/" },
         { text: "Notas de versión", url: "/notas-de-version/" },
       ],
     },
@@ -47,7 +50,8 @@ module.exports = {
       enlaces: [
         { text: "Sobre la cooperativa", url: "/sobre/" },
         { text: "Casos de uso", url: "/casos-de-uso/", pronto: true },
-        { text: "Blog", url: "/blog/", pronto: true },
+        { text: "Socios", url: "/socios/" },
+        { text: "Blog", url: "/blog/" },
         { text: "Notas de versión", url: "/notas-de-version/" },
         { text: "Súmate", url: "/sumate/" },
       ],
@@ -59,7 +63,7 @@ module.exports = {
         { text: "Privacidad", url: "/privacidad/" },
         { text: "Accesibilidad", url: "/docs/accesibilidad/" },
         { text: "Código en GitHub", url: "https://github.com/tecnocoopcl" },
-        { text: "Blog por RSS", url: "/feed.xml", pronto: true },
+        { text: "Blog por RSS", url: "/feed.xml" },
       ],
     },
   ],

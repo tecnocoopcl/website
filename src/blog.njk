@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Blog
+description: "El blog de Tecnocooperativa: cada semana, en qué estamos trabajando y lo que vamos aprendiendo."
+permalink: /blog/
+eleventyImport:
+  collections: ["publicadas"]
+---
+<section class="page-content">
+  <div class="wrap">
+    <h1>Blog</h1>
+    <p class="lede">Cada semana contamos en qué estamos trabajando y lo que vamos aprendiendo en el camino.</p>
+
+    <ol class="entradas">
+      {% for entrada in collections.publicadas | reverse %}
+      <li class="entrada">
+        {% set autor = entrada.data.autor | socio(socios) %}
+        <p class="entrada__meta"><time datetime="{{ entrada.date | fechaIso }}">{{ entrada.date | fechaLarga }}</time></p>
+        <h2><a href="{{ entrada.url }}">{{ entrada.data.title }}</a></h2>
+        {% if entrada.data.resumen %}<p>{{ entrada.data.resumen }}</p>{% endif %}
+        <p class="entrada__autor">Por <a href="{{ autor.url }}">{{ autor.nombre }}</a></p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

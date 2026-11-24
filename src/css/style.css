@@ -636,13 +636,6 @@ section h2 {
   margin: 2.25rem 0 0.5rem;
 }
 
-.columna__seccion {
-  color: var(--color-primary);
-  font-size: 0.95rem !important;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
 .columna .lede {
   margin-bottom: 0.75rem;
 }
@@ -856,32 +849,6 @@ main:focus {
   margin: 0 0 1rem;
 }
 
-.anuncio {
-  margin: 0 0 1.5rem;
-  padding: 1.25rem 1.25rem 0.5rem;
-  background: var(--color-accent-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-}
-
-.anuncio h3 {
-  font-size: 1.15rem;
-  margin: 0 0 0.75rem;
-}
-
-.anuncio p {
-  margin: 0 0 0.75rem;
-}
-
-.anuncio ul {
-  margin: 0 0 1rem;
-  padding-left: 1.25rem;
-}
-
-.anuncio li {
-  margin: 0.5rem 0;
-}
-
 .notas {
   list-style: none;
   padding: 0;
@@ -941,12 +908,42 @@ main:focus {
   margin: 0.25rem 0 0.5rem;
 }
 
-.entrada h2 a {
+.entrada h3 {
+  font-size: 1.2rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.entrada h2 a,
+.entrada h3 a {
   text-decoration: none;
 }
 
-.entrada h2 a:hover {
+.entrada h2 a:hover,
+.entrada h3 a:hover {
   text-decoration: underline;
+}
+
+/* Socios */
+.socios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 42rem;
+}
+
+.socio {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.socio h2 {
+  font-size: 1.3rem;
+  margin: 0 0 0.25rem;
+}
+
+.socio p {
+  color: var(--color-muted);
+  margin: 0;
 }
 
 .entrada p {

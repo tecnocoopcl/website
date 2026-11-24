@@ -2,7 +2,8 @@
   <div class="wrap">
     <div class="site-footer__mapa">
       <div class="site-footer__col">
-        <p><span class="brand">{{ site.name }}</span>, {{ site.tagline | lower }}</p>
+        <p class="brand">{{ site.name }}</p>
+        <p>{{ site.tagline }}</p>
         <p>Escríbenos a <a href="mailto:{{ site.correo }}">{{ site.correo }}</a></p>
       </div>
       {% for grupo in site.footer %}
@@ -16,6 +17,6 @@
       </nav>
       {% endfor %}
     </div>
-    <p class="site-footer__legal">{{ site.legalName }}, {{ site.etapa }}, <a href="/sobre/#estado">¿qué significa esto?</a></p>
+    <p class="site-footer__legal">Una cooperativa {{ site.etapa }}, <a href="/sobre/#estado">¿qué significa esto?</a></p>
   </div>
 </footer>

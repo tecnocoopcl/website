@@ -21,6 +21,13 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // `autor: alejandro-bustos-nunez` en una entrada -> su ficha en src/_data/socios.js.
+  eleventyConfig.addFilter("socio", (slug, socios) => {
+    const s = socios.find((x) => x.slug === slug);
+    if (!s) throw new Error(`Socio desconocido: ${slug} (agrégalo en src/_data/socios.js)`);
+    return { ...s, url: `/socios/${s.slug}/` };
+  });
+
   // Para el feed: los enlaces relativos del contenido pasan a absolutos, porque
   // un lector de RSS no sabe de qué sitio vienen.
   eleventyConfig.addFilter("absolutos", (html, base) =>
@@ -37,6 +44,13 @@ module.exports = function (eleventyConfig) {
       new Date(Date.UTC(y, m - 1, d))
     );
   });
+
+  // Entradas del blog que se publican: el blog, las fichas de socios y el feed
+  // usan esta lista, así que los borradores no aparecen ni en dev. Un borrador
+  // se revisa abriendo su dirección con `npm run dev`.
+  eleventyConfig.addCollection("publicadas", (collectionApi) =>
+    collectionApi.getFilteredByTag("blog").filter((e) => !e.data.borrador)
+  );
 
   eleventyConfig.addCollection("docsSections", (collectionApi) => {
     const docs = collectionApi

@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+{#- Una entrada del blog (src/blog/*.md). -#}
+<section class="page-content">
+  <article class="wrap columna">
+    {% if borrador %}<div class="note"><p><strong>Borrador.</strong> Esta entrada solo se ve en local: no sale en el sitio publicado hasta quitarle <code>borrador: true</code>.</p></div>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if resumen %}<p class="lede">{{ resumen }}</p>{% endif %}
+    {% set firma = autor | socio(socios) %}
+    <p class="columna__firma">Por <a href="{{ firma.url }}">{{ firma.nombre }}</a>, <time datetime="{{ page.date | fechaIso }}">{{ page.date | fechaLarga }}</time></p>
+
+    {{ content | safe }}
+
+    <p class="columna__volver"><a href="/blog/">← Todas las entradas</a></p>
+  </article>
+</section>

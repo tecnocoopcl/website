@@ -14,20 +14,6 @@ permalink: /notas-de-version/
     <details class="serie"{% if serie.abierta %} open{% endif %} id="espacio-{{ serie.id }}">
       <summary><h2>{{ serie.titulo }}</h2></summary>
       {% if serie.intro %}<p class="serie__intro">{{ serie.intro }}</p>{% endif %}
-      {% if serie.anuncio %}
-      <section class="anuncio" aria-labelledby="anuncio-{{ serie.id }}">
-        <h3 id="anuncio-{{ serie.id }}">{{ serie.anuncio.titulo }} <time class="nota__fecha" datetime="{{ serie.anuncio.fecha }}">{{ serie.anuncio.fecha | fechaLarga }}</time></h3>
-        {% for p in serie.anuncio.parrafos %}<p>{{ p }}</p>{% endfor %}
-        {% if serie.anuncio.puntos.length %}
-        <ul>
-          {% for punto in serie.anuncio.puntos %}
-          <li><strong>{{ punto.titulo }}</strong> {{ punto.texto }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {% for p in serie.anuncio.cierre %}<p>{{ p }}</p>{% endfor %}
-      </section>
-      {% endif %}
       <ol class="notas">
         {% for v in serie.versiones %}
         <li class="nota" id="v{{ v.version | replace('.', '-') }}">

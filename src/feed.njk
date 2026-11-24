@@ -1,0 +1,31 @@
+---
+permalink: /feed.xml
+eleventyImport:
+  collections: ["publicadas"]
+eleventyExcludeFromCollections: true
+layout: null
+---
+{#- Feed Atom del blog, para lectores de RSS. Los borradores no salen en el
+    build publicado (ver el preprocesador «borradores» en .eleventy.js). -#}
+{%- set entradas = collections.publicadas | reverse -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-CL">
+  <title>Blog de {{ site.name }}</title>
+  <subtitle>{{ site.tagline }}</subtitle>
+  <link href="{{ site.url }}/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/blog/"/>
+  <id>{{ site.url }}/blog/</id>
+  <updated>{% if entradas.length %}{{ entradas[0].date.toISOString() }}{% endif %}</updated>
+  {%- for entrada in entradas %}
+  <entry>
+    <title>{{ entrada.data.title }}</title>
+    <link href="{{ site.url }}{{ entrada.url }}"/>
+    <id>{{ site.url }}{{ entrada.url }}</id>
+    <updated>{{ entrada.date.toISOString() }}</updated>
+    {%- set autor = entrada.data.autor | socio(socios) %}
+    <author><name>{{ autor.nombre }}</name><uri>{{ site.url }}{{ autor.url }}</uri></author>
+    {% if entrada.data.resumen %}<summary>{{ entrada.data.resumen }}</summary>{% endif %}
+    <content type="html">{{ entrada.templateContent | absolutos(site.url) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

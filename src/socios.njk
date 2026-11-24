@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Socios
+description: "Quiénes forman Tecnocooperativa: las fichas de sus socias y socios."
+permalink: /socios/
+---
+<section class="page-content">
+  <div class="wrap">
+    <h1>Socios</h1>
+    <p class="lede">Las personas que están formando la cooperativa. ¿Quieres estar aquí? <a href="/sumate/">Súmate</a>.</p>
+
+    <ul class="socios">
+      {% for s in socios %}
+      <li class="socio">
+        <h2><a href="/socios/{{ s.slug }}/">{{ s.nombre }}</a></h2>
+        <p>{{ s.rol }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
