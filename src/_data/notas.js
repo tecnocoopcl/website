@@ -6,6 +6,10 @@
 // vacío. Con `ojo = true` se marca como algo que conviene leer antes de actualizar.
 //
 // Las fechas salen del CHANGELOG de espacio y de las publicaciones del feed.
+//
+// Una serie puede llevar un `anuncio`: un resumen con fecha que se muestra
+// arriba de sus versiones, para contar lo grande y lo que viene. Tiene
+// `titulo`, `fecha`, `parrafos`, `puntos` (cada uno `{ titulo, texto }`) y `cierre`.
 const c = (app, texto, ojo = false) => ({ app, texto, ojo });
 
 module.exports = [
@@ -15,7 +19,95 @@ module.exports = [
     abierta: true,
     intro:
       "Estamos trabajando en la versión 3 de espacio. Para llegar a una versión estable, publicamos betas que puedes probar. Si prefieres no arriesgar, la versión estable sigue siendo la 2.",
+    anuncio: {
+      titulo: "En qué estamos",
+      fecha: "2026-11-24",
+      parrafos: [
+        "Desde el último anuncio, la cooperativa no ha parado. Ahora las novedades se cuentan aquí, en las Notas de versión del sitio, y no solo por WhatsApp. Así queda todo en un lugar, ordenado y fácil de revisar.",
+      ],
+      puntos: [
+        {
+          titulo: "Las notas de versión, en el sitio.",
+          texto: "Cada versión de espacio tiene sus novedades en esta página, desde la 1.3 hasta la beta más reciente. El sitio también se reorganizó: suma las páginas Cómo funciona, Empieza aquí, Súmate, Privacidad y un glosario, y la sección Plataformas, con Música, Audioteca y Academia.",
+        },
+        {
+          titulo: "Nuestra nube propia: medio.",
+          texto: "Estamos construyendo medio, la plataforma donde corren los servicios de la cooperativa en nuestras propias máquinas, sin depender de nubes de terceros. Se administra desde una consola (consola.tecnocooperativa.cl) que muestra cada servicio con sus pedidos, sus registros y su consumo, y desde ahí se dan de alta socios y organizaciones. El sitio y la API de la cooperativa ya corren en medio, y la página Estado muestra las máquinas en vivo.",
+        },
+        {
+          titulo: "Correo de entrada.",
+          texto: "La cooperativa ya recibe correo en sus direcciones, como correo@tecnocooperativa.cl. Lo que llega puede quedar en tu Pod, y la cooperativa no puede leer ni borrar lo que ya tienes. La app Correo de espacio, para leerlo, llega en la próxima beta.",
+        },
+        {
+          titulo: "Pruebas con IA.",
+          texto: "Probamos un modelo de lenguaje que corre en el PC de la cooperativa, no en la nube de otra empresa. La beta.9 trae la app IA, que tiene un chat y tareas listas: resumir, reescribir más claro, lluvia de ideas y traducir al inglés. Las conversaciones no se guardan. Por ahora es un experimento, para conocer qué se puede hacer con nuestro propio equipo.",
+        },
+        {
+          titulo: "Presentaciones.",
+          texto: "La beta.9 también trae una app nueva para armar diapositivas y presentar con notas, siguiente diapositiva y cronómetro en una segunda pantalla.",
+        },
+        {
+          titulo: "Dominio definitivo.",
+          texto: "Todo pasa a tecnocooperativa.cl: el sitio, la API, los Pods, los WebID, Música y Audioteca.",
+        },
+      ],
+      cierre: [
+        "Con esto cerramos la versión 3. No entran funciones nuevas: desde ahora el trabajo es dejar lo que hay firme y seguro.",
+        "Antes de que la beta pase a estable, haremos dos cosas: alinear espacio y los servicios de la cooperativa con la Ley de Protección de Datos Personales de Chile (Ley 21.719), y hacer una revisión de ciberseguridad. Recién después de eso publicaremos espacio 3.0.0 estable.",
+        "Si quieres seguir probando, activa «Recibir versiones beta» en Configuración › Actualizaciones. Si prefieres no arriesgar, la versión estable sigue siendo la 2.10.",
+      ],
+    },
     versiones: [
+      {
+        version: "3.0.0-beta.10",
+        fecha: "2026-11-23",
+        cambios: [
+          c("Presentaciones", "Al presentar, el puntero aparece al mover el mouse y se esconde tras dos segundos quieto, también en pantalla completa y en la segunda pantalla."),
+        ],
+      },
+      {
+        version: "3.0.0-beta.9",
+        fecha: "2026-11-23",
+        cambios: [
+          c("Presentaciones", "App nueva para armar diapositivas con plantillas (portada, viñetas, imagen y sección) y notas para quien presenta. Con un proyector o una segunda pantalla, ahí se ve la diapositiva, y en espacio las notas, la siguiente y un cronómetro."),
+          c("Presentaciones", "Se guardan solas en el equipo y van al Pod con «Guardar en el Pod» o ⌘S. Si el Pod se cae, se siguen abriendo, editando y presentando."),
+          c("IA", "App nueva que conversa con el modelo de lenguaje del PC de la cooperativa. Tiene un chat y tareas listas: resumir, reescribir más claro, lluvia de ideas y traducir al inglés. Si el PC está durmiendo, avisa mientras despierta. Las conversaciones no se guardan."),
+          c("Archivos", "Muestra la hora de la última modificación, no solo el día."),
+          c("Inicio", "El estado de la cooperativa muestra las máquinas (en línea, durmiendo o sin respuesta), cuántos servicios corren y la energía que miden los enchufes."),
+          c("Música", "Se abre en musica.tecnocooperativa.cl. Las direcciones públicas de cada proyecto cambian de dominio.", true),
+        ],
+      },
+      {
+        version: "3.0.0-beta.8",
+        fecha: "2026-11-22",
+        cambios: [
+          c("", "La API de la cooperativa pasa a api.tecnocooperativa.cl (estado de la cooperativa, Estudio, Árbol y Encuestador)."),
+        ],
+      },
+      {
+        version: "3.0.0-beta.7",
+        fecha: "2026-11-13",
+        cambios: [
+          c("Audioteca", "Se abre en audioteca.tecnocooperativa.cl. La posición y las piezas marcadas como escuchadas empiezan de cero.", true),
+        ],
+      },
+      {
+        version: "3.0.0-beta.6",
+        fecha: "2026-11-13",
+        cambios: [
+          c("Estudio", "Las piezas de una serie se numeran solas y se reordenan con ↑↓, y la audioteca las muestra en ese orden."),
+          c("Estudio", "Enlaza la audioteca en su dominio nuevo."),
+        ],
+      },
+      {
+        version: "3.0.0-beta.5",
+        fecha: "2026-11-13",
+        cambios: [
+          c("", "El parlante de la pestaña marca solo la app que suena y ya no parpadea, lo que cargaba el procesador."),
+          c("Estudio", "El formulario de una pieza ya no borra lo que escribes cuando termina de subir el audio, y avisa de cambios sin guardar solo cuando los hay."),
+          c("", "Las apps pueden descargar archivos, por ejemplo «Descargar JSON»."),
+        ],
+      },
       {
         version: "3.0.0-beta.4",
         fecha: "2026-11-12",
@@ -57,6 +149,27 @@ module.exports = [
     titulo: "espacio 2",
     abierta: false,
     versiones: [
+      {
+        version: "2.10",
+        fecha: "2026-11-22",
+        cambios: [
+          c("Trenzador", "Llega a la versión estable, con fuentes vivas, red del corpus, codificación sobre el documento, libro de códigos y tramas para cristalizar hallazgos."),
+          c("Trenzador", "Guarda con ⌘S, exporta cada fuente a tu computador o al Pod, y la abre directo en Archivos."),
+          c("Trenzador", "«Cabos sueltos» para anotar los próximos pasos de cada trama, como búsquedas, contactos o fuentes por revisar."),
+          c("Trenzador", "Tutorial «De un tema a una trama analítica», con el flujo completo probado en corpus reales."),
+          c("", "La API de la cooperativa pasa a api.tecnocooperativa.cl."),
+        ],
+      },
+      {
+        version: "2.9.2",
+        fecha: "2026-11-13",
+        cambios: [c("Estudio", "Enlaza la audioteca en audioteca.tecnocooperativa.cl.")],
+      },
+      {
+        version: "2.9.1",
+        fecha: "2026-11-12",
+        cambios: [c("", "Cambia el sitio donde espacio busca las actualizaciones: ahora es tecnocooperativa.cl.")],
+      },
       {
         version: "2.9",
         fecha: "2026-11-12",

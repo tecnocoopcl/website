@@ -5,6 +5,9 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
 ## [Sin publicar]
 
+### Agregado
+- Las **Notas de versión** abren con un resumen de lo trabajado hasta el 24 de noviembre (medio, correo de entrada, pruebas con IA y los pasos antes de espacio 3 estable), y suman espacio 3.0.0-beta.5 a beta.10, 2.9.1, 2.9.2 y 2.10. Una serie puede llevar ese resumen en el campo `anuncio` de `src/_data/notas.js`.
+
 ## [1.17.0] - 2026-11-24
 
 ### Agregado

@@ -856,6 +856,32 @@ main:focus {
   margin: 0 0 1rem;
 }
 
+.anuncio {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem 1.25rem 0.5rem;
+  background: var(--color-accent-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.anuncio h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.anuncio p {
+  margin: 0 0 0.75rem;
+}
+
+.anuncio ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.anuncio li {
+  margin: 0.5rem 0;
+}
+
 .notas {
   list-style: none;
   padding: 0;
