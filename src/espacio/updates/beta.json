@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.10",
+  "version": "3.0.0-beta.11",
   "dmg": {
-    "file": "espacio-3.0.0-beta.10-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.10-arm64.dmg",
-    "sha512": "t2xelyBWtLpytXdOKpmn8ZC0/hfq+f+sN20jGF3n7OEz402t1zcVvfB1LlLJ7dq6RgwJb8NrVrYvK/4vcrIIBQ==",
-    "size": 127679048
+    "file": "espacio-3.0.0-beta.11-arm64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.11-arm64.dmg",
+    "sha512": "X0imeLNndXIRNudqdX5g7d4Kxe695xrmiFqjvGDdi8ySPOIsj0Z5PymzV2oSVPMcH6nqBaR5X9cEv0iD/ETwuA==",
+    "size": 127686131
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.10-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.10-x64.dmg",
-    "sha512": "EobmXGYUzBoIwWBToLoC04SYKq9EqC12Tk4lWOUMM+cZOix6hW8mcsQ3/6rm+b0OnzjIhDsVzNABDEc9QXgLvg==",
-    "size": 134630189
+    "file": "espacio-3.0.0-beta.11-x64.dmg",
+    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.11-x64.dmg",
+    "sha512": "fWdHxaNHBNtECU25smP1/m4UlK4XAwwicGNDpSDIBcFbjXUuc698NEHofw1hX0c9Hz9z9KFCOFCOA4JLIqkASA==",
+    "size": 134632575
   },
-  "notes": "Al presentar, el puntero aparece al mover el mouse y se esconde tras dos segundos quieto.",
-  "date": "2026-11-24T01:18:06.382Z"
+  "notes": "Encuestador: secciones entre las preguntas, importar una encuesta desde JSON, y avisos al guardar y publicar.",
+  "date": "2026-11-24T23:04:33.813Z"
 }
