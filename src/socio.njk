@@ -19,7 +19,7 @@ eleventyComputed:
     <p class="lede">{{ socio.rol }}</p>
 
     {% for p in socio.bio %}<p>{{ p }}</p>{% endfor %}
-    {% if socio.sitio %}<p class="socio__sitio">Su sitio personal: <a href="{{ socio.sitio }}" rel="me noopener" target="_blank">{{ socio.sitio | replace("https://", "") }}</a></p>{% endif %}
+    {% if socio.sitio %}<p class="socio__sitio">¿Quieres conocer más de mi trabajo? Visita mi sitio web, <a href="{{ socio.sitio }}" rel="me noopener" target="_blank">{{ socio.sitio | replace("https://", "") }}</a>.</p>{% endif %}
 
     {% set escritos = [] %}
     {% for entrada in collections.publicadas | reverse %}{% if entrada.data.autor == socio.slug %}{% set escritos = (escritos.push(entrada), escritos) %}{% endif %}{% endfor %}
