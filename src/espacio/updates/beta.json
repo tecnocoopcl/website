@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.11",
+  "version": "3.0.0-beta.12",
   "dmg": {
-    "file": "espacio-3.0.0-beta.11-arm64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.11-arm64.dmg",
-    "sha512": "X0imeLNndXIRNudqdX5g7d4Kxe695xrmiFqjvGDdi8ySPOIsj0Z5PymzV2oSVPMcH6nqBaR5X9cEv0iD/ETwuA==",
-    "size": 127686131
+    "file": "espacio-3.0.0-beta.12-arm64.dmg",
+    "url": "https://pods.tecnocooperativa.cl/tecnocooperativa/espacio/versiones/espacio-3.0.0-beta.12-arm64.dmg",
+    "sha512": "SMO68tYmXSvRBCbyrxFlTRAGhiTqyoWdeSBEbcMgyfcDvL6XcIcmbzLJPNMNKUlLjQET9wAKshFY9GpjYyY1EQ==",
+    "size": 127679109
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.11-x64.dmg",
-    "url": "https://pods-rpi-tc.aebn.cl/tecnocoop/espacio/versiones/espacio-3.0.0-beta.11-x64.dmg",
-    "sha512": "fWdHxaNHBNtECU25smP1/m4UlK4XAwwicGNDpSDIBcFbjXUuc698NEHofw1hX0c9Hz9z9KFCOFCOA4JLIqkASA==",
-    "size": 134632575
+    "file": "espacio-3.0.0-beta.12-x64.dmg",
+    "url": "https://pods.tecnocooperativa.cl/tecnocooperativa/espacio/versiones/espacio-3.0.0-beta.12-x64.dmg",
+    "sha512": "Uev0aPhnNN5W78KaZHWFQzNL3N4VLZZd8NYoZIzX6CqpWkJpY4EqYc4Qr5QbY1BF3KtdqTShdgObY+qSm4VyXA==",
+    "size": 134635428
   },
-  "notes": "Encuestador: secciones entre las preguntas, importar una encuesta desde JSON, y avisos al guardar y publicar.",
-  "date": "2026-11-24T23:04:33.813Z"
+  "notes": "Migración a tecnocooperativa.cl: las mini-apps y el inicio de sesión usan el servidor nuevo. Encuestador ya no se cae al crear una encuesta y se ve bien de nuevo.",
+  "date": "2026-11-25T03:19:49.558Z"
 }
