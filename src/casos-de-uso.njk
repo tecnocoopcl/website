@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Casos de uso
+description: "Casos de uso de Tecnocooperativa: socios cuentan, con sus palabras, para qué usan sus Pods, WebID y las aplicaciones de la cooperativa."
+permalink: /casos-de-uso/
+borrador: true
+---
+<section class="page-content">
+  <div class="wrap">
+    <h1>Casos de uso</h1>
+    <p class="lede">Lo que hace la cooperativa, contado por quienes la usan todos los días. Cada socio llegó por una necesidad distinta; esto es lo que resolvió.</p>
+
+    <div class="testimonios">
+      {% for t in testimonios %}
+      <article class="testimonio">
+        <h2>{{ t.titulo }}</h2>
+        <blockquote>
+          <p>{{ t.cita }}</p>
+        </blockquote>
+        {% for parrafo in t.texto %}<p>{{ parrafo }}</p>{% endfor %}
+        <p class="testimonio__firma"><strong>{{ t.nombre }}</strong>, {{ t.rol }}</p>
+        <p class="testimonio__usa">Usa:
+          {% for u in t.usa %}<a href="{{ u.url }}">{{ u.text }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+        </p>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="note">
+      <p>¿Usas la cooperativa para algo que no aparece aquí? <a href="mailto:{{ site.correo }}?subject=Mi%20caso%20de%20uso">Cuéntanos</a>: queremos sumar más casos.</p>
+    </div>
+  </div>
+</section>

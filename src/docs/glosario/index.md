@@ -38,7 +38,7 @@ Tu espacio personal de almacenamiento en internet, basado en el estándar [Solid
 
 <h2 id="socio">Socia o socio</h2>
 
-Una persona que es parte de la cooperativa: la usa, la gobierna y la sostiene junto a las demás. Hoy estamos reuniendo a quienes serán socias y socios fundadores. Ver [Súmate](/sumate/).
+Una persona que es parte de la cooperativa: la usa, la gobierna y la sostiene junto a las demás. Hoy estamos reuniendo a quienes quieren ser parte de ella. Ver [Súmate](/sumate/).
 
 <h2 id="solid">Solid</h2>
 
