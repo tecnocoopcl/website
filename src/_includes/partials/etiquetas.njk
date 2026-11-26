@@ -1,4 +1,5 @@
 <p class="app-etiquetas">
   {%- for tipo in app.tipos %}<span class="etiqueta etiqueta--{{ tipo }}">{% if tipo == "nativa" %}Nativa{% else %}Web{% endif %}</span> {% endfor -%}
+  {%- if app.beta %}<span class="etiqueta etiqueta--beta">Solo en la beta</span> {% endif -%}
   {%- if app.temprana %}<span class="etiqueta etiqueta--temprana">En etapa temprana</span>{% endif -%}
 </p>
