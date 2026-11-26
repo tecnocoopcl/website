@@ -20,6 +20,27 @@ module.exports = [
       "Estamos trabajando en la versión 3 de espacio. Para llegar a una versión estable, publicamos betas que puedes probar. Si prefieres no arriesgar, la versión estable sigue siendo la 2.",
     versiones: [
       {
+        version: "3.0.0-beta.12",
+        fecha: "2026-11-25",
+        cambios: [
+          c("Correo", "App nueva para recibir lo que llega a las direcciones de la cooperativa, como correo@tecnocooperativa.cl. Al activar la casilla, la cooperativa puede dejar los mensajes en tu Pod, sin poder leer ni borrar lo que ya tienes. Muestra remitente, asunto, texto y adjuntos, y guarda el original para abrirlo con cualquier programa de correo."),
+          c("Encuestador", "Ya no se cae al crear una encuesta nueva."),
+          c("Encuestador", "Se ve bien de nuevo: las tarjetas ya no se montan unas sobre otras y los botones muestran su texto con el tema oscuro."),
+          c("", "Se inicia sesión en el servidor nuevo de la cooperativa, pods.tecnocooperativa.cl. Para compartir, mandar mensajes y avisar basta el nombre del socio, como antes. Las cuentas del servidor anterior ya no reciben avisos ni mensajes: tienes que entrar con tu cuenta nueva.", true),
+          c("", "Archivador, Notas, Por Hacer, Encuestador y los enlaces públicos de Árbol se abren desde tecnocooperativa.cl, igual que Música y Audioteca. Mientras esos sitios terminan de mudarse, puede que alguna muestre un error de conexión.", true),
+        ],
+      },
+      {
+        version: "3.0.0-beta.11",
+        fecha: "2026-11-24",
+        cambios: [
+          c("Encuestador", "Secciones entre las preguntas, con título y una explicación, para agrupar las preguntas de un mismo tema. Se pueden reordenar."),
+          c("Encuestador", "Importa una encuesta desde un archivo JSON. Se abre como borrador, para que la revises antes de publicarla."),
+          c("Encuestador", "Las alternativas nuevas ya no traen «Opción 1» escrito: es solo una pista que desaparece al escribir."),
+          c("Encuestador", "Guardar un borrador ya no exige la encuesta completa, y avisa cuando guardas y cuando publicas."),
+        ],
+      },
+      {
         version: "3.0.0-beta.10",
         fecha: "2026-11-23",
         cambios: [

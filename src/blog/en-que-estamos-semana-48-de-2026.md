@@ -29,7 +29,7 @@ La beta.9 también trae una aplicación nueva para armar presentaciones. Sus fun
 
 ## Dominio definitivo
 
-Todo pasa a tecnocooperativa.cl, el sitio, la API, los Pods, los WebID, Música y Audioteca. Esta migración ocurre debido a que la cooperativa inició sus operaciones ligada al dominio del socio fundador.
+Todo pasa a tecnocooperativa.cl, el sitio, la API, los Pods, los WebID, Música y Audioteca. Esta migración ocurre debido a que la cooperativa inició sus operaciones ligada al dominio personal de uno de sus socios.
 
 Dada esta migración muchos servicios han sido deprecados directamente sin un plan de contigencia o de descenso. Por lo que probablemente tengas que instalar espacio desde cero. 
 
