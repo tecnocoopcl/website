@@ -1,17 +1,17 @@
 {
-  "version": "3.0.0-beta.12",
+  "version": "3.0.0-beta.13",
   "dmg": {
-    "file": "espacio-3.0.0-beta.12-arm64.dmg",
-    "url": "https://pods.tecnocooperativa.cl/tecnocooperativa/espacio/versiones/espacio-3.0.0-beta.12-arm64.dmg",
-    "sha512": "SMO68tYmXSvRBCbyrxFlTRAGhiTqyoWdeSBEbcMgyfcDvL6XcIcmbzLJPNMNKUlLjQET9wAKshFY9GpjYyY1EQ==",
-    "size": 127679109
+    "file": "espacio-3.0.0-beta.13-arm64.dmg",
+    "url": "https://pods.tecnocooperativa.cl/tecnocooperativa/espacio/versiones/espacio-3.0.0-beta.13-arm64.dmg",
+    "sha512": "NbkQfK/sZLKSa485tCfqy12BFakH5r/bvT25t0a/UxlhxBM4vGL8m+s1iVxRymgwOLuUdeq7uZ0iz2Px/22HGw==",
+    "size": 127715607
   },
   "dmgX64": {
-    "file": "espacio-3.0.0-beta.12-x64.dmg",
-    "url": "https://pods.tecnocooperativa.cl/tecnocooperativa/espacio/versiones/espacio-3.0.0-beta.12-x64.dmg",
-    "sha512": "Uev0aPhnNN5W78KaZHWFQzNL3N4VLZZd8NYoZIzX6CqpWkJpY4EqYc4Qr5QbY1BF3KtdqTShdgObY+qSm4VyXA==",
-    "size": 134635428
+    "file": "espacio-3.0.0-beta.13-x64.dmg",
+    "url": "https://pods.tecnocooperativa.cl/tecnocooperativa/espacio/versiones/espacio-3.0.0-beta.13-x64.dmg",
+    "sha512": "QbyN4S+rp/WHmxMXNVDSWqzfeMvk61v8xh1bRIgaA8K4zkeTXjONq4vq2H4mRtf8gKybYzlMXwmMm4ULCQnkUQ==",
+    "size": 134692883
   },
-  "notes": "Migración a tecnocooperativa.cl: las mini-apps y el inicio de sesión usan el servidor nuevo. Encuestador ya no se cae al crear una encuesta y se ve bien de nuevo.",
-  "date": "2026-11-25T03:19:49.558Z"
+  "notes": "Encuestador con pasos: una página a la vez con su avance. Asistentes en Configuración: Claude puede usar tus apps de espacio con tu sesión. Incluye todo lo de la beta.12 (Correo y migración a tecnocooperativa.cl).",
+  "date": "2026-11-26T02:46:43.398Z"
 }
