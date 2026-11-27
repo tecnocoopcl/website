@@ -18,7 +18,16 @@ const socios = [
   },
   // Fichas en blanco: cada socio escribe su `bio` en primera persona
   // y, si quiere, agrega `sitio`. El `rol` es «Socio» o «Socia».
-  { slug: "raul-zuleta", nombre: "Raúl Zuleta", rol: "Socio", sitio: "https://razc.cl", bio: [] },
+  {
+    slug: "raul-zuleta",
+    nombre: "Raúl Zuleta",
+    rol: "Socio",
+    sitio: "https://razc.cl",
+    bio: [
+      "Soy investigador y educador. Mi trayectoria articula psicología, sociología y antropología para estudiar cómo experiencias, organismos y ambientes son traducidos en categorías, datos, instrumentos y formas de acción. Actualmente desarrollo una etnografía doctoral sobre producción de conocimiento en laboratorios de biotecnología vegetal en Chile.",
+      "Mi trabajo también cruza pedagogía y experimentación material mediante guías, dispositivos, datos y software. En la cooperativa convierto problemas concretos de investigación en herramientas abiertas que puedo construir y revisar junto con otros socios. Me interesa que quienes usan una tecnología también puedan intervenirla, adaptarla y decidir colectivamente qué debería hacer.",
+    ],
+  },
   { slug: "daphne-vial", nombre: "Daphne Vial", rol: "Socia", bio: [] },
   { slug: "gonzalo-pincheira", nombre: "Gonzalo Pincheira", rol: "Socio", bio: [] },
   {
