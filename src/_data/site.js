@@ -20,7 +20,7 @@ module.exports = {
       text: "Cooperativa",
       dropdown: [
         { text: "Sobre la cooperativa", url: "/sobre/" },
-        { text: "Casos de uso", url: "/casos-de-uso/", pronto: true },
+        { text: "Casos de uso", url: "/casos-de-uso/" },
         { text: "Socios", url: "/socios/" },
         { text: "Blog", url: "/blog/" },
         { text: "Notas de versión", url: "/notas-de-version/" },
@@ -49,7 +49,7 @@ module.exports = {
       titulo: "Cooperativa",
       enlaces: [
         { text: "Sobre la cooperativa", url: "/sobre/" },
-        { text: "Casos de uso", url: "/casos-de-uso/", pronto: true },
+        { text: "Casos de uso", url: "/casos-de-uso/" },
         { text: "Socios", url: "/socios/" },
         { text: "Blog", url: "/blog/" },
         { text: "Notas de versión", url: "/notas-de-version/" },

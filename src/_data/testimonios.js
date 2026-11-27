@@ -1,7 +1,7 @@
 // Testimonios de la página Casos de uso (/casos-de-uso/) y de la portada.
-// PROVISORIO: el de Alejandro es un primer borrador.
-// Reemplázalo por sus palabras antes de publicar.
-module.exports = [
+// Solo se publican los de `publicados`. El de Alejandro queda guardado en
+// `guardados` (es un primer borrador): para publicarlo, muévelo a `publicados`.
+const guardados = [
   {
     nombre: "Alejandro",
     rol: "Socio",
@@ -17,6 +17,9 @@ module.exports = [
       { text: "espacio", url: "/aplicaciones/espacio/" },
     ],
   },
+];
+
+const publicados = [
   {
     nombre: "Raúl",
     rol: "Socio, antropólogo",
@@ -33,3 +36,5 @@ module.exports = [
     ],
   },
 ];
+
+module.exports = publicados;
