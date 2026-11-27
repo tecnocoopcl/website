@@ -1,6 +1,6 @@
 // Testimonios de la página Casos de uso (/casos-de-uso/) y de la portada.
-// PROVISORIOS: el de Raúl es de relleno y el de Alejandro un primer borrador.
-// Reemplázalos por sus palabras antes de publicar.
+// PROVISORIO: el de Alejandro es un primer borrador.
+// Reemplázalo por sus palabras antes de publicar.
 module.exports = [
   {
     nombre: "Alejandro",
@@ -19,17 +19,17 @@ module.exports = [
   },
   {
     nombre: "Raúl",
-    rol: "Socio, músico",
-    titulo: "Mis canciones siguen siendo mías",
-    cita: "Grabo en la casa, y antes subía todo a plataformas que se quedaban con mis canciones y decidían a quién le llegaban. Ahora las publico desde mi Pod y aparecen en Música.",
+    rol: "Socio, antropólogo",
+    titulo: "Construir la herramienta también fue analizar",
+    cita: "Tenía mi corpus etnográfico repartido entre un disco externo, Obsidian y distintos documentos. Con Trenzador pude reunir pequeñas unidades alrededor de una pregunta sin perder la relación con las fuentes originales.",
     texto: [
-      "Armo cada disco con Estudio, en espacio: portada, orden de los temas y créditos. Cuando lo publico, cualquiera lo puede escuchar sin crearse una cuenta.",
-      "Si mañana quiero sacar un disco, lo saco y no queda copiado en ningún otro lado. Eso, para alguien que vive de lo que hace, no es un detalle.",
+      "La primera unidad fue sobre unas semillas. Al poner juntos un diario de campo, una entrevista y un expediente administrativo, pude comparar las tres versiones de un mismo episodio y reconocer qué preguntas todavía necesitaban nuevas fuentes.",
+      "La aplicación fue creciendo a partir de esos problemas reales. Programarla con ayuda de IA y revisarla con otro socio hizo que desarrollar la herramienta se volviera también una forma de comprometerme con el análisis.",
     ],
     usa: [
-      { text: "Música", url: "/plataformas/musica/" },
-      { text: "Estudio", url: "/aplicaciones/estudio/" },
-      { text: "Pods", url: "/pods/" },
+      { text: "Trenzador", url: "/aplicaciones/trenzador/" },
+      { text: "espacio", url: "/aplicaciones/espacio/" },
+      { text: "Pods", url: "/como-funciona/#pods" },
     ],
   },
 ];
